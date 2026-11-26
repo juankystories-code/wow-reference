@@ -27,7 +27,7 @@ Alternativa para a 60: **Engineering + Mining** da Sniper Scope, rifles BoE y mu
 
 - Entrenadores de la Horda: Karolek (Orgrimmar, Expert), Una (Thunder Bluff, Artisan) y Hahrana Ironhide (Feralas, Master: Nightscape Pants).
 - Recetas útiles: Hillman's Shoulders (105), Barbaric Shoulders (150), Guardian Gloves (165), Nightscape Headband (180), Nightscape Pants (205), Wild Leather Leggings (215), Wicked Leather Gauntlets (235), Runic Leather Headband (265) y Heavy Scorpid Helm (270).
-- **Camp Tent:** aún no se sabe con qué skill se aprende. Compruébalo en el entrenador y apúntalo aquí. Ver [sistemas-forever.md](sistemas-forever.md).
+- **Camp Tent:** pide **Leatherworking 20** (Wowhead Forever, objeto 279978). Ver [sistemas-forever.md](sistemas-forever.md).
 - Llegar a 150, 225 y 300 te da **puntos de Legacy**.
 
 ## Cooking

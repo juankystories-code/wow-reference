@@ -24,7 +24,7 @@ Detalles del campamento:
 - El fuego dura 10 minutos y tiene 5 minutos de reutilización.
 - Cada personaje puede poner un objeto de campamento por hora.
 - Los buffs de campamento no se acumulan con los buffs de clase equivalentes.
-- Aún no se sabe con qué skill de Leatherworking se aprende la Camp Tent. Compruébalo en el entrenador.
+- La Camp Tent pide Leatherworking 20 y la Camp Chair, Skinning 20 (Wowhead Forever).
 
 ## Cozy Sleeping Bag (cadena de la Horda, desde nivel 14)
 Recompensa: **Cozy Sleeping Bag** (+1 % de experiencia por cada minuto tumbado, hasta +3 %; también acumula rested fuera de posadas) y 5 Student Fodder.

@@ -1,0 +1,395 @@
+# Glosario
+
+Qué es cada nombre propio que sale en la guía. El portal lo usa para las fichas al pasar el ratón.
+
+- Formato: `## Sección {tipo}` y `- **Nombre** (alias): qué es y qué pinta en tu ruta.`
+- Tipos: zona, mazmorra, npc, objeto, hechizo, talento, mascota, mision, oficio, sistema, jerga.
+- Después de añadir términos, ejecuta `node web/wowhead.mjs` para bajar su tooltip e icono de Wowhead, y luego `node web/build.mjs`.
+- Si Wowhead empareja mal un término, fuerza la entrada con `{wh:npc=1234}` (tipos: npc, item, quest, spell, zone) o desactívala con `{wh:no}`.
+
+## Zonas y lugares {zona}
+- **Durotar**: Zona de inicio de orcos y trols (1-10), en Kalimdor. Orgrimmar está al norte.
+- **Valley of Trials**: Valle de inicio dentro de Durotar. Aquí haces los niveles 1-5.
+- **Sen'jin Village**: Aldea trol en la costa de Durotar. Aquí aprendes Cooking y First Aid.
+- **Razor Hill**: Pueblo principal de Durotar: posada, entrenador de cazador (Thotar) y vendedores. Hearthstone aquí de 7 a 10.
+- **Tiragarde Keep**: Fortaleza humana de Kul Tiras al sur de Razor Hill. Misiones de nivel 8-10.
+- **Burning Blade Coven**: Cueva del Valley of Trials con brujos de la Burning Blade. Ahí está Yarrog Baneshadow.
+- **Orgrimmar**: Capital de la Horda. Entrenadores de armas y profesiones, subasta, banco y zepelines.
+- **The Barrens** (Barrens): Sabana enorme de nivel 10-25 al oeste de Durotar. Tu zona de 10 a 20.
+- **The Crossroads** (Crossroads): Pueblo central de The Barrens. Hub de misiones y punto de vuelo.
+- **Ratchet**: Puerto goblin neutral en la costa de The Barrens. Barco a Booty Bay.
+- **Camp Taurajo**: Campamento tauren del sur de The Barrens. Hub de 18 a 22.
+- **Thunder Bluff**: Capital tauren en Mulgore. Misiones de Wailing Caverns y entrenadores.
+- **Westfall**: Zona de la Alianza en Eastern Kingdoms. Solo vas por un paso de la Cozy Sleeping Bag.
+- **Booty Bay**: Puerto goblin neutral al sur de Stranglethorn Vale.
+- **Stonetalon Mountains** (Stonetalon): Montañas al noroeste de The Barrens (20-25). Zona disputada.
+- **Sun Rock Retreat**: Hub de la Horda en Stonetalon Mountains.
+- **Windshear Crag**: Zona de Stonetalon con muchos bichos para matar. Tiene campamento de Forever.
+- **Ashenvale**: Bosque de nivel 18-30 al norte de The Barrens. Zona disputada.
+- **Splintertree Post**: Hub de la Horda en el este de Ashenvale.
+- **Zoram'gar Outpost**: Hub de la Horda en la costa oeste de Ashenvale.
+- **Hillsbrad Foothills** (Hillsbrad): Zona de 20-30 en Eastern Kingdoms. Alternativa a Stonetalon y Ashenvale. Muy disputada.
+- **Tarren Mill**: Pueblo de la Horda en Hillsbrad Foothills.
+- **Thoradin's Wall**: Muralla entre Hillsbrad y Arathi. Último paso de la Cozy Sleeping Bag.
+- **Loch Modan**: Zona enana de la Alianza. Solo vas por un paso de la Cozy Sleeping Bag.
+- **Wetlands**: Zona de la Alianza entre Arathi y Loch Modan. Solo la cruzas.
+- **Arathi Highlands** (Arathi): Zona de 30-40 en Eastern Kingdoms. Alternativa a Stranglethorn y Desolace.
+- **Hammerfall**: Hub de la Horda en Arathi Highlands.
+- **Undercity**: Capital de los Renegados, en Eastern Kingdoms. Zepelín desde Orgrimmar.
+- **Silverpine Forest**: Zona de los Renegados al sur de Undercity. La cruzas para ir a Hillsbrad.
+- **Thousand Needles**: Cañón de nivel 25-35 al sur de The Barrens.
+- **Freewind Post**: Hub de la Horda en Thousand Needles, sobre una meseta.
+- **The Great Lift**: Ascensor que baja de The Barrens a Thousand Needles.
+- **The Shimmering Flats** (Shimmering Flats): Salar al este de Thousand Needles con los goblins de las carreras. Misiones de 30-35.
+- **Stranglethorn Vale** (Stranglethorn): Selva de nivel 30-45 en Eastern Kingdoms. Muy disputada.
+- **Grom'gol Base Camp** (Grom'gol): Campamento de la Horda en Stranglethorn. Zepelín desde Orgrimmar.
+- **Nesingwary's Expedition** (Nesingwary): Campamento de cazadores en Stranglethorn. Cadenas Tiger, Panther y Raptor Mastery.
+- **Desolace**: Desierto de nivel 30-40 al oeste de Stonetalon.
+- **Shadowprey Village**: Hub de la Horda en la costa de Desolace, con posada.
+- **Ghost Walker Post**: Campamento de la Horda en el centro de Desolace. No tiene posada.
+- **Mannoroc Coven**: Zona de demonios del sur de Desolace. Buena para matar bichos a 38-40.
+- **Kodo Graveyard**: Cementerio de kodos en Desolace. Bueno para Skinning.
+- **Badlands**: Zona rocosa de nivel 35-45 en Eastern Kingdoms. Aquí domas a Broken Tooth.
+- **Kargath**: Hub de la Horda en Badlands.
+- **Dustwallow Marsh** (Dustwallow): Pantano de nivel 35-45 al sur de The Barrens. Alternativa.
+- **Brackenwall Village**: Hub de la Horda en Dustwallow Marsh.
+- **Riverglades**: Zona nueva de Forever (38-44). Se llega en barco desde Tanaris.
+- **Rog'mar**: Base de la Horda en Riverglades.
+- **Powderfuse Port**: Puerto de Riverglades al que llega el barco de Tanaris.
+- **Steamwheedle Port**: Puerto goblin en la costa de Tanaris. Barco a Riverglades.
+- **Tanaris**: Desierto de nivel 40-50 al sur de Thousand Needles.
+- **Gadgetzan**: Ciudad goblin neutral en Tanaris.
+- **The Hinterlands** (Hinterlands): Zona de 40-50 en Eastern Kingdoms. Alternativa a Tanaris.
+- **Revantusk Village**: Aldea trol de la Horda en The Hinterlands.
+- **Feralas**: Selva de nivel 40-50 al oeste de Thousand Needles.
+- **Camp Mojache**: Hub de la Horda en Feralas.
+- **Azshara**: Zona de 45-55 al norte de Ashenvale. Alternativa.
+- **Searing Gorge**: Zona volcánica de 43-50 en Eastern Kingdoms. Alternativa.
+- **Un'Goro Crater** (Un'Goro): Cráter de dinosaurios de nivel 48-55 al sur de Tanaris.
+- **Marshal's Refuge**: Campamento neutral del norte de Un'Goro Crater.
+- **Felwood**: Bosque corrupto de nivel 48-55 al norte de Ashenvale.
+- **Emerald Sanctuary**: Campamento del sur de Felwood.
+- **Burning Steppes**: Zona de 50-58 en Eastern Kingdoms. Alternativa.
+- **Flame Crest**: Hub de la Horda en Burning Steppes.
+- **Western Plaguelands**: Zona de la Plaga de nivel 51-58, al norte de Hillsbrad.
+- **The Bulwark**: Puesto de los Renegados en la entrada de Western Plaguelands.
+- **Eastern Plaguelands**: Zona de la Plaga de nivel 53-60.
+- **Light's Hope Chapel** (Light's Hope): Capilla neutral en Eastern Plaguelands, con punto de vuelo.
+- **Silithus**: Desierto de nivel 55-60 al sur de Un'Goro. Alternativa.
+- **Cenarion Hold**: Base neutral en Silithus.
+- **Winterspring**: Zona nevada de nivel 55-60 al norte de Felwood.
+- **Everlook**: Pueblo goblin neutral de Winterspring.
+- **Darkwhisper Gorge**: Barranco peligroso de Winterspring. Evítalo si vas solo.
+- **Stonard**: Pueblo de la Horda en Swamp of Sorrows. Tiene vuelo a Rog'mar.
+- **Shen'dralas**: Zona nueva de Forever que pide reputación con los centauros.
+- **Mount Hyjal**: Zona de nivel 60 en Forever. Va en el documento de late game.
+
+## Mazmorras {mazmorra}
+- **Ragefire Chasm**: Mazmorra de grupo bajo Orgrimmar. No está en tu ruta: solo si te sale grupo fácil. Ahí cae Barbaric Crossbow.
+- **Wailing Caverns**: Mazmorra de The Barrens. Haz las misiones y saca **Venomstrike** de Lord Serpentis.
+- **Blackfathom Deeps**: Mazmorra de Ashenvale. No está en tu ruta.
+- **Razorfen Kraul**: Mazmorra quilboar del sur de The Barrens. Misión Vengeful Fate → Quilboar Blaster.
+- **Scarlet Monastery**: Mazmorra de la Cruzada Escarlata en Tirisfal Glades. Opcional.
+- **Krol'dok Stronghold**: Mazmorra nueva de Forever, de ogros, en Riverglades (40-45).
+- **Uldaman**: Mazmorra de Badlands. No está en tu ruta.
+- **Zul'Farrak**: Mazmorra trol de Tanaris (44-48). Arch of the Covenant.
+- **Maraudon**: Mazmorra de Desolace (46-50). Verdant Keeper's Aim.
+- **Lower Blackrock Spire** (LBRS): Mazmorra de Blackrock Mountain (55-60). Blackcrow. {wh:zone=1583}
+- **Stratholme**: Mazmorra de nivel 60 en Eastern Plaguelands.
+- **Bloodmasters Ring**: Desafío de grupo al aire libre en Riverglades, en territorio de ogros.
+
+## PNJ y bestias {npc}
+- **Kaltunk**: Primer PNJ de misiones del Valley of Trials.
+- **Gornek**: PNJ de misiones del Valley of Trials.
+- **Hana'zua**: Orco herido del Valley of Trials. Te da la misión de Sarkoth.
+- **Sarkoth**: Escórpido grande del Valley of Trials que tienes que matar.
+- **Zureetha Fargaze**: PNJ de misiones del Valley of Trials (Vile Familiars).
+- **Galgar**: Cocinero del Valley of Trials (Galgar's Cactus Apple Surprise).
+- **Foreman Thazz'ril**: Capataz del Valley of Trials (Lazy Peons, Thazz'ril's Pick).
+- **Yarrog Baneshadow**: Brujo jefe de la cueva Burning Blade Coven.
+- **Jen'shan**: Entrenador de cazador del Valley of Trials.
+- **Ukor**: PNJ a la salida del Valley of Trials (A Peon's Burden).
+- **Master Gadrin**: PNJ de misiones de Sen'jin Village.
+- **Master Vornal**: PNJ de misiones de Sen'jin Village (A Solvent Spirit).
+- **Orgnil Soulscar**: PNJ de misiones de Razor Hill.
+- **Innkeeper Grosk**: Posadero de Razor Hill. Pon aquí el hearthstone.
+- **Gar'Thok**: PNJ de misiones de Razor Hill (Vanquish the Betrayers).
+- **Furl Scornbrow**: PNJ de la torre oeste de Razor Hill (Carry Your Weight).
+- **Lieutenant Benedict**: Oficial humano de Tiragarde Keep. Suelta el objeto de The Admiral's Orders.
+- **Thotar**: Entrenador de cazador de Razor Hill. Te da la misión de clase a nivel 10.
+- **Ormak Grimshot**: Entrenador de cazador de Orgrimmar. Termina la misión de clase.
+- **Shal'ma**: Gato de Durotar. Tu primera mascota a nivel 10.
+- **Raluk**: Gato de Durotar. Alternativa si no encuentras a Shal'ma.
+- **Venomtail Scorpid**: Escórpido del noroeste de Durotar. Domándolo aprendes Claw 2.
+- **Scorpid Worker**: Escórpido del Valley of Trials que enseña Claw 1.
+- **Mottled Boar**: Jabalí del Valley of Trials (Cutting Teeth).
+- **Dire Mottled Boar**: Jabalí de Durotar que domas en la misión de clase.
+- **Surf Crawler**: Cangrejo de la costa de Durotar que domas en la misión de clase.
+- **Armored Scorpid**: Escórpido de Durotar que domas en la misión de clase.
+- **Hanashi**: Entrenador de armas de Orgrimmar. Enseña arcos.
+- **Sayoc**: Entrenador de armas de Orgrimmar. Enseña arcos.
+- **Archibald**: Entrenador de armas de Undercity. Enseña ballestas.
+- **Innkeeper Boorand Plainswind**: Posadero de The Crossroads.
+- **Devrak**: Maestro de vuelo de The Crossroads.
+- **Bragok**: Maestro de vuelo de Ratchet.
+- **Dishu**: Gato de The Barrens. No hace falta: Shal'ma sirve.
+- **Humar the Pridelord**: Gato raro de élite de The Barrens. Opcional.
+- **Nara Wildmane**: PNJ de Thunder Bluff. Leaders of the Fang (Wailing Caverns).
+- **Apothecary Zamah**: PNJ de Thunder Bluff. Serpentbloom (Wailing Caverns).
+- **Lord Serpentis**: Jefe de Wailing Caverns. Suelta Venomstrike.
+- **Omusa Thunderhorn**: Maestro de vuelo de Camp Taurajo.
+- **Jorn Skyseer**: PNJ de misiones de Camp Taurajo.
+- **Hezrul Bloodmark**: Élite de The Barrens. Hazlo en dúo.
+- **Serena Bloodfeather**: Arpía jefa de The Barrens (Harpy Lieutenants).
+- **Tharm**: Maestro de vuelo de Sun Rock Retreat.
+- **Goggeroc**: Élite de Stonetalon (Earthen Arise).
+- **Besseleth**: Araña élite de Stonetalon (Arachnophobia).
+- **Vhulgra**: Maestro de vuelo de Splintertree Post.
+- **Andruk**: Maestro de vuelo de Zoram'gar Outpost.
+- **Mist Howler**: Lobo raro de Ashenvale con Furious Howl. Opcional.
+- **Mahren Skyseer**: PNJ de misiones de The Barrens.
+- **Nyse**: Maestra de vuelo de Freewind Post.
+- **Thysta**: Maestro de vuelo de Grom'gol.
+- **Kragg**: Entrenador de cazador de Grom'gol.
+- **Thalon**: Maestro de vuelo de Shadowprey Village.
+- **Wulan**: Vendedora de Desolace. Vende el Expert Cookbook.
+- **Gorrik**: Maestro de vuelo de Kargath.
+- **Broken Tooth**: Gato raro de Badlands que ataca cada 1,0 s. Tu mascota de 37 a 60.
+- **King Bangalash**: Tigre élite de Stranglethorn. Lo matas en Big Game Hunter.
+- **Bulkrek Ragefist**: Maestro de vuelo de Gadgetzan.
+- **Dirge Quikcleave**: Cocinero de Gadgetzan (Clamlette Surprise, Cooking Artisan).
+- **Xar'Ti**: Entrenador de equitación de los trols, en Durotar.
+- **Zjolnir**: Vendedor de raptores, en Durotar.
+- **Karolek**: Entrenador de Leatherworking de Orgrimmar.
+- **Hahrana Ironhide**: Entrenadora de Leatherworking de Feralas.
+- **Balai Lok'Wein**: Vendedora de Dustwallow Marsh. Vende el libro de First Aid Expert.
+- **Doctor Gregory Victor**: PNJ de Arathi. Misión Triage (First Aid Artisan).
+- **Old Man Heming**: Pescador de Booty Bay. Vende el libro de Fishing Expert.
+- **Georgia**: Maestra de vuelo de Light's Hope Chapel.
+- **Nathanos Blightcaller**: Líder de los forestales oscuros en Eastern Plaguelands. Su cadena da Gorewood Bow.
+- **Shadow Hunter Vosh'gajin**: Jefa de Lower Blackrock Spire. Suelta Blackcrow.
+- **Ta'shkal**: Gato invocado, el más rápido del juego. Opcional a 57+.
+- **Pix Xizzix**: Goblin de Booty Bay con las misiones semanales "In Demand" a 60.
+- **Black Bear Patriarch**: Oso de Loch Modan que enseña Claw 3.
+- **Prairie Wolf Alpha**: Lobo de Mulgore que enseña Bite 2.
+- **Stranglethorn Tiger**: Tigre de Stranglethorn que enseña Dash 1.
+- **Kraul Bat**: Murciélago de Razorfen Kraul que enseña Dive 1.
+
+## Objetos {objeto}
+- **Hearthstone** (piedra de hogar): Piedra que te devuelve a la posada que elijas. Tiene 1 hora de reutilización.
+- **Foreman's Blackjack**: Porra para despertar a los peones en Lazy Peons.
+- **Burning Blade Medallion**: Objeto de misión que suelta Yarrog Baneshadow.
+- **Venomstrike**: Arco azul que suelta Lord Serpentis en Wailing Caverns. Tu arma de 19.
+- **Barbaric Crossbow**: Ballesta de Ragefire Chasm. Solo si haces esa mazmorra.
+- **Precision Bow**: Arco a elegir en Scramble (Cozy Sleeping Bag).
+- **Moonsight Rifle**: Rifle a elegir en Scramble (Cozy Sleeping Bag).
+- **Feathered Arrow**: Flechas que da Scramble.
+- **Naga Heartpiercer**: Arco de Blackfathom Deeps. Solo si haces esa mazmorra.
+- **Quilboar Blaster**: Rifle de la misión Vengeful Fate (Razorfen Kraul).
+- **Spellsever Crossbow**: Ballesta de Scarlet Monastery. Opcional.
+- **Frosty Blunderbuss**: Arma de fuego opcional de Stranglethorn.
+- **Sidegunner Shottie**: Arma de fuego de la misión Gizelton Caravan (Desolace).
+- **Blasting Hackbut**: Rifle de la misión Questioning Reethe (Dustwallow Marsh).
+- **Bow of Plunder**: Arco de la misión Dangerous! (Hillsbrad).
+- **Truthseeker's Bow**: Arco que dan en la biblioteca de tu facción por entregar 25 libros.
+- **Master Hunter's Bow**: Arco de la misión Big Game Hunter (Stranglethorn).
+- **Master Hunter's Rifle**: Rifle de la misión Big Game Hunter (Stranglethorn).
+- **Arch of the Covenant**: Arco de Zul'Farrak.
+- **Galgann's Fireblaster**: Arma de fuego de Uldaman.
+- **Verdant Keeper's Aim**: Arco de la misión Corruption of Earth and Seed (Maraudon).
+- **Thorium Rifle**: Rifle de Engineering que se vende en la subasta.
+- **Dark Iron Rifle**: Rifle de Engineering que se vende en la subasta.
+- **Megashot Rifle**: Rifle que puede caer en Maraudon.
+- **Gorewood Bow**: Arco de la cadena de Nathanos Blightcaller.
+- **Blackcrow**: Ballesta de Lower Blackrock Spire. La mejor antes de raid.
+- **Carapace Spine Crossbow**: Ballesta de Stratholme. Para 60.
+- **Deep Jungle Rifle**: Rifle de nivel 58. Para 60.
+- **Cozy Sleeping Bag**: Saco de dormir de Forever: tumbarte en él da un bonus de experiencia. Se consigue con una cadena de misiones desde 14.
+- **Student Fodder**: Objeto que dan las misiones de la Cozy Sleeping Bag.
+- **Swiftness Potion**: Poción de velocidad que da un paso de la Cozy Sleeping Bag.
+- **Lesser Troll's Blood Potion**: Poción de regeneración de vida que da un paso de la Cozy Sleeping Bag.
+- **Keen Skinning Knife**: Cuchillo que da +3 a Skinning. Solo Horda (misión Unwelcome Guests).
+- **Wildhunter Cloak**: Capa de la misión The Hunt Completed (Ashenvale).
+- **Totemic Clan Ring**: Anillo de la misión Revenge of Gann (The Barrens).
+- **Jangdor's Handcrafted Tunic**: Pechera de cuero de la misión Improved Quality (Feralas).
+- **Farmer Dalson's Shotgun**: Escopeta de la misión Locked Away (Western Plaguelands).
+- **Argent Dawn Commission**: Abalorio que te deja recoger Scourgestones para la Argent Dawn.
+- **Sniper Scope**: Mira de Engineering para el arma a distancia. Para 60.
+- **Expert Cookbook**: Libro que desbloquea Cooking Expert. Lo vende Wulan.
+- **Flint and Tinder**: Yesquero para encender el Basic Campfire.
+- **Simple Wood**: Madera para el Basic Campfire.
+- **Undermine Satchel**: Bolsa con oro de las misiones "In Demand" a 60.
+- **Elixir of the Mongoose**: Elixir de Agility y crítico para 60.
+- **Grilled Squid**: Comida de Agility para 60.
+- **Thick Leather**: Cuero de nivel 40-50. Para Leatherworking o para vender.
+- **Minion's Scourgestone** (Scourgestones): Piedras que sueltan los no-muertos con el Argent Dawn Commission equipado.
+
+## Hechizos del cazador {hechizo}
+- **Auto Shot**: Disparo automático con el arma a distancia. En Forever necesitas 0,5 s quieto para empezar.
+- **Raptor Strike**: Golpe cuerpo a cuerpo. Solo si te alcanzan.
+- **Track Beasts**: Muestra las bestias en el minimapa.
+- **Serpent Sting**: Veneno de daño con el tiempo. Solo en enemigos que duren.
+- **Aspect of the Monkey**: Aspecto que te da esquivar. Para antes de 10 y para domar.
+- **Arcane Shot**: Disparo instantáneo de daño arcano.
+- **Hunter's Mark**: Marca al enemigo y sube el daño a distancia contra él.
+- **Concussive Shot**: Ralentiza al enemigo. Para kitear.
+- **Aspect of the Hawk**: Aspecto de Attack Power a distancia. El que llevas siempre desde 10.
+- **Call Pet**: Llama a tu mascota.
+- **Dismiss Pet**: Retira a tu mascota. Le baja la felicidad.
+- **Feed Pet**: Le das de comer a la mascota para que esté Happy.
+- **Revive Pet**: Revive a tu mascota muerta.
+- **Tame Beast**: Doma una bestia. Lo aprendes con la misión de clase de 10.
+- **Beast Training**: Ventana para enseñar habilidades a tu mascota.
+- **Track Humanoids**: Muestra los humanoides en el minimapa.
+- **Mend Pet**: Cura a tu mascota con el tiempo.
+- **Wing Clip**: Ralentiza al enemigo cuerpo a cuerpo. Para salir de la zona muerta.
+- **Distracting Shot**: Provoca al enemigo. No la entrenes.
+- **Eagle Eye**: Vista lejana. No la entrenes.
+- **Eyes of the Beast**: Controlas a tu mascota. No la entrenes.
+- **Scare Beast**: Asusta a una bestia. Solo para PvP.
+- **Immolation Trap**: Trampa de fuego. No la entrenes mientras subes.
+- **Mongoose Bite**: Golpe cuerpo a cuerpo tras esquivar. No lo entrenes.
+- **Multi-Shot**: Dispara a varios enemigos a la vez.
+- **Track Undead**: Muestra los no-muertos en el minimapa.
+- **Aimed Shot**: Disparo potente con tiempo de lanzamiento.
+- **Aspect of the Cheetah**: +30 % de velocidad para viajar. Te aturde si te golpean.
+- **Freezing Trap**: Trampa que congela a un enemigo.
+- **Disengage**: Te quita amenaza en cuerpo a cuerpo.
+- **Scorpid Sting**: Veneno que baja la precisión. No lo entrenes.
+- **Track Hidden**: Muestra a los sigilosos. Útil contra pícaros.
+- **Beast Lore**: Información de una bestia. No lo entrenes.
+- **Rapid Fire**: Sube mucho tu velocidad de disparo durante un rato.
+- **Track Elementals**: Muestra los elementales en el minimapa.
+- **Frost Trap**: Trampa que crea hielo que ralentiza.
+- **Feign Death**: Te haces el muerto para salir de combate.
+- **Aspect of the Beast**: Aspecto de Attack Power cuerpo a cuerpo. Opcional.
+- **Flare**: Revela a los sigilosos en un área. Para PvP.
+- **Track Demons**: Muestra los demonios en el minimapa.
+- **Explosive Trap**: Trampa de fuego en área. No la entrenes mientras subes.
+- **Viper Sting**: Veneno que quema maná. Para PvP.
+- **Aspect of the Pack**: Como Cheetah, pero para todo el grupo.
+- **Volley**: Lluvia de flechas en área. No la entrenes mientras subes.
+- **Track Giants**: Muestra los gigantes en el minimapa.
+- **Aspect of the Wild**: Resistencia a la naturaleza para el grupo.
+- **Track Dragonkin**: Muestra los dragones en el minimapa.
+- **Tranquilizing Shot**: Quita el enfurecer a un enemigo. Viene de un libro a 60.
+- **Berserking**: Racial trol: +10 % de velocidad de ataque y de lanzamiento durante un rato.
+- **Rapid Regeneration**: Racial trol nueva de Forever: canalización para curarte, quieto.
+- **Beast Slaying**: Racial trol: +5 % de daño contra bestias.
+
+## Habilidades de la mascota {mascota}
+- **Claw**: Habilidad principal del gato. Súbela al máximo rango que puedas.
+- **Bite**: Mordisco. Casi innecesario en un gato.
+- **Dash**: Sprint de la mascota.
+- **Dive**: Sprint de las mascotas voladoras.
+- **Growl**: Provocación de la mascota. Mantenla al día en el entrenador de mascotas.
+- **Furious Howl**: Aullido de lobo que sube el daño del grupo.
+- **Great Stamina**: Más vida para la mascota. En el entrenador de mascotas.
+- **Natural Armor**: Más armadura para la mascota. En el entrenador de mascotas.
+
+## Talentos {talento}
+- **Deadly Aspects**: Talento de Beast Mastery. Tu primer talento (10-14).
+- **Focused Fire**: Talento de Beast Mastery (15-16).
+- **Endurance Training**: Talento de Beast Mastery: más vida para la mascota (17-18).
+- **Improved Revive Pet**: Talento de Beast Mastery (19).
+- **Bestial Swiftness**: Talento de Beast Mastery: la mascota corre más (20).
+- **Pathfinding**: Talento de Beast Mastery: tus aspectos de velocidad son mejores (21-22).
+- **Unleashed Fury**: Talento de Beast Mastery: más daño de la mascota (23-26).
+- **Summon Hawk**: Talento nuevo de Forever. Invoca halcones que atacan a tu objetivo (25).
+- **Ferocity**: Talento de Beast Mastery: más crítico de la mascota (27-32).
+- **Intimidation**: Talento de Beast Mastery: aturdimiento con la mascota (30).
+- **Bestial Discipline**: Talento de Beast Mastery (33-34).
+- **Frenzy**: Talento de Beast Mastery: la mascota ataca más rápido tras un crítico (35-39).
+- **Bestial Wrath**: Talento final de Beast Mastery: la mascota se enfurece (40).
+- **Lethal Attacks**: Talento de Marksmanship (41-45).
+- **Careful Aim**: Talento de Marksmanship (46-50).
+- **Rapid Killing**: Talento de Marksmanship (51-52).
+- **Efficiency**: Talento de Marksmanship: tus disparos cuestan menos maná (53-55).
+- **Trueshot Aura**: Talento de Marksmanship: aura de Attack Power (56).
+- **Mortal Shots**: Talento de Marksmanship: más daño de los críticos a distancia (57-60).
+- **Lone Wolf**: Talento de Marksmanship para jugar sin mascota. No lo cojas mientras subes.
+- **Hawk Eye**: Talento de Marksmanship: más alcance. Para PvP.
+- **Improved Concussive Shot**: Talento de Marksmanship: Concussive Shot puede aturdir. Para PvP.
+- **Improved Stings**: Talento de Marksmanship: mejora los venenos.
+- **Barrage**: Talento de Marksmanship: mejora Multi-Shot y Volley.
+- **Scatter Shot**: Talento de Marksmanship: desorienta al enemigo. Para PvP.
+- **Ranged Weapon Specialization**: Talento de Marksmanship: más daño a distancia.
+- **Sniper Shot**: Talento de Marksmanship de Forever: disparo largo de 4 s.
+- **Deflection**: Talento de Survival: más parada.
+- **Entrapment**: Talento de Survival: tus trampas inmovilizan.
+- **Improved Wing Clip**: Talento de Survival: Wing Clip puede inmovilizar.
+- **Surefooted**: Talento de Survival: más golpe y resistencia a ralentizaciones.
+- **Deterrence**: Talento de Survival: esquivas y paras más durante unos segundos.
+- **Counterattack**: Talento de Survival: contraataque tras parar.
+
+## Misiones clave {mision}
+- **Taming the Beast**: Misión de clase de 10 (Thotar): doma tres bestias de práctica.
+- **Training the Beast**: Final de la misión de clase con Ormak Grimshot. Aprendes a tener mascota.
+- **Leaders of the Fang**: Misión de Wailing Caverns. Da recompensa a elegir.
+- **Vengeful Fate**: Misión de Razorfen Kraul. Da Quilboar Blaster.
+- **Scramble**: Paso de la Cozy Sleeping Bag en Stonetalon. Da arco o rifle a elegir.
+- **Welcome to the Jungle**: Primera misión de Nesingwary. Desbloquea las cadenas de caza de Stranglethorn.
+- **Big Game Hunter**: Misión de matar a King Bangalash. Da Master Hunter's Bow o Rifle.
+- **Corruption of Earth and Seed**: Misión de Maraudon. Da Verdant Keeper's Aim.
+- **Gizelton Caravan**: Escolta de la caravana de Desolace. Da Sidegunner Shottie.
+- **Questioning Reethe**: Misión de Dustwallow Marsh. Da Blasting Hackbut.
+- **Unwelcome Guests**: Misión que da Keen Skinning Knife.
+- **Triage**: Misión de First Aid Artisan en Arathi.
+- **Clamlette Surprise**: Misión de Cooking Artisan en Gadgetzan.
+
+## Profesiones {oficio}
+- **Skinning**: Desollar bestias muertas para sacar cuero. Tu primera profesión.
+- **Leatherworking**: Fabricar armadura de cuero y la Camp Tent. Tu segunda profesión.
+- **Cooking**: Cocinar comida con Well Fed y encender el campamento. Profesión secundaria.
+- **First Aid**: Vendas y, en Forever, Healing Potions. Profesión secundaria.
+- **Fishing**: Pesca. Opcional.
+- **Engineering**: Ingeniería: rifles, munición y Sniper Scope. Alternativa para 60.
+- **Mining**: Minería. Va con Engineering.
+
+## Sistemas de Forever {sistema}
+- **Rested** (rested XP, descanso): Experiencia de descanso: duplica la experiencia por matar mientras dure. Se acumula en posadas y capitales. {wh:no}
+- **Well Fed**: Buff de comida: +5 % de experiencia por muerte. Se pierde al morir. {wh:no}
+- **Camping** (campamento): Sistema de Forever: haces un fuego y pones objetos de campamento para recibir buffs. {wh:no}
+- **Basic Campfire**: Fuego de campamento de Cooking. Base del Camping.
+- **Camp Tent**: Tienda de Leatherworking: buff de experiencia de descanso.
+- **Camp Chair**: Silla de Skinning: +2 % de crítico en el campamento.
+- **First Aid Kit**: Objeto de campamento de First Aid: más Stamina.
+- **Legacy**: Sistema de cuenta de Forever (tecla Y): ganas puntos y compras perks. {wh:no}
+- **Frequent Flier**: Perk de Legacy: vuelos al 50 % y montura más rápida. Tu primer perk. {wh:no}
+- **Talented**: Perk de Legacy: los talentos llegan antes. {wh:no}
+- **Well Rested**: Perk de Legacy: más rested. {wh:no}
+- **Bartering**: Perk de Legacy: vendedores más baratos. {wh:no}
+- **Field Guide**: Perk de Legacy: menos reutilización de los objetos de campamento. {wh:no}
+- **Permanence**: Perk de Legacy: los buffs de campamento duran más. {wh:no}
+- **Spelunker**: Listas de jefes de mazmorra que dan puntos de Legacy. {wh:no}
+- **Explore Azeroth**: Logros de exploración que dan puntos de Legacy. {wh:no}
+- **Apprentice Riding**: Montura a nivel 40 (+60 % de velocidad).
+- **Journeyman Riding**: Montura épica a nivel 60 (+100 % de velocidad).
+- **Doble especialización** (dual spec): Dos builds de talentos y cambio gratis fuera de combate. Desde 40. {wh:no}
+- **Expertise**: Estadística de Forever que sustituye a Weapon Skill. {wh:no}
+- **Libros de biblioteca** (libros de biblioteca): Libros que encuentras por el mundo y entregas en la biblioteca de tu facción. 25 = Truthseeker's Bow. {wh:no}
+- **Bolsa de componentes**: Bolsa extra de Forever solo para componentes. No ocupa hueco. {wh:no}
+
+## Jerga {jerga}
+- **Beast Mastery** (BM): Rama de talentos de la mascota. La tuya para subir.
+- **Marksmanship** (MM): Rama de talentos de daño a distancia.
+- **Survival**: Rama de talentos de trampas y cuerpo a cuerpo.
+- **zona muerta**: Hueco entre el cuerpo a cuerpo y unas 8 yardas donde no puedes disparar.
+- **kitear** (kitea, kiting): Ir alejándote del enemigo mientras le disparas, para que no te pegue.
+- **aggro** (amenaza): Quién es el objetivo del enemigo. Quieres que lo tenga tu mascota.
+- **elite** (élite): Enemigo más fuerte de lo normal, con dragón dorado en el retrato. Suele pedir grupo.
+- **rare** (raro): Enemigo especial con dragón plateado en el retrato. Suele aparecer cada varias horas.
+- **BoP**: Bind on Pickup: se liga al cogerlo. No se puede vender en la subasta.
+- **BoE**: Bind on Equip: se liga al equiparlo. Se puede vender en la subasta.
+- **hub**: Pueblo o campamento con varias misiones juntas.
+- **punto de vuelo** (puntos de vuelo): PNJ que te lleva volando entre sitios que ya hayas visitado.
+- **establo** (stable): Donde guardas mascotas que no usas. Lo lleva el Stable Master de cada pueblo.
+- **Training Points**: Puntos de tu mascota para aprender habilidades. Suben con su nivel y su lealtad.
+- **lealtad** (Loyalty): Nivel de confianza de la mascota. Sube al darle de comer.
+- **felicidad** (Happy): Estado de ánimo de la mascota. Happy = 125 % de daño.
+- **dúo**: Ir con otro jugador. Para los élite de las misiones.
+- **zona disputada** (zonas disputadas): Zona con misiones de las dos facciones. En reino PvP te pueden atacar.
+- **DPS**: Daño por segundo. Para comparar armas, mira el DPS del tooltip.
+- **Auction House** (subasta): Casa de subastas de Orgrimmar. Ahí vendes cuero, tela y BoE.
+- **/way**: Comando de TomTom: pone una flecha hacia esas coordenadas. Pulsa una coordenada del portal para copiarla.
+- **TomTom**: Addon que añade la flecha de navegación para las coordenadas.

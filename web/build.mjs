@@ -1,6 +1,7 @@
 // Genera web/portal.html a partir de los .md de docs/.
 // Uso: node web/build.mjs
-import { readFileSync, writeFileSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync } from 'node:fs';
+import { parseGlossary, GENERIC_ICONS } from './glosario.mjs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -23,7 +24,8 @@ const DOCS = [
   ['addons', 'guia/addons.md', 'Addons'],
   ['fuentes', 'fuentes.md', 'Fuentes'],
 ];
-const FILE2ID = Object.fromEntries(DOCS.map(([id, f]) => [f.split('/').pop(), id]));
+const FILE2ID = { ...Object.fromEntries(DOCS.map(([id, f]) => [f.split('/').pop(), id])), 'glosario.md': 'glosario', 'lineup.md': 'inicio' };
+const ID2LABEL = { ...Object.fromEntries(DOCS.map(([id, , label]) => [id, label])), glosario: 'Glosario', inicio: 'Lineup' };
 
 // ---------- Markdown mínimo ----------
 const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -38,6 +40,8 @@ function shortUrl(u) {
 function link(t, u) {
   if (/^https?:/.test(u)) return `<a href="${u}" target="_blank" rel="noopener">${t}</a>`;
   const id = FILE2ID[u.split('#')[0].split('/').pop()];
+  // "[profesiones.md](profesiones.md)" se muestra como "Profesiones"
+  if (id && /\.md$/.test(t)) t = ID2LABEL[id];
   return id ? `<a href="#${id}">${t}</a>` : t;
 }
 function inline(s) {
@@ -168,24 +172,63 @@ function lvl(cell) {
 }
 const strip = (s) => s.replace(/\*\*/g, '');
 
-// Resumen de la ruta
-const resumen = tableRows(sec('ruta', 'Resumen').md).map((r) => {
-  const [min, max] = lvl(r[0]);
-  const zone = strip(r[1]);
-  const dungeon = strip(r[3]);
-  return { min, max, zone: zone === '—' ? dungeon : zone, alt: strip(r[2]), dungeon: dungeon === '—' ? '' : dungeon, isDungeon: zone === '—' };
-});
-const talents = tableRows(byId.talentos.sections.find((s) => /^Leveo/.test(s.title)).md)
-  .map((r) => ({ range: lvl(r[0]), html: inline(r[1]) }));
-const spells = tableRows(readFileSync(join(docsDir, 'guia/hechizos.md'), 'utf8'))
-  .map((r) => ({ lvl: lvl(r[0])[0], html: inline(r[1]), kind: /^Sí/.test(r[2]) ? 'si' : /^Saltar/.test(r[2]) ? 'no' : 'info', note: inline(r[2]) }));
-const pets = tableRows(sec('mascotas', 'Plan').md).map((r) => ({
-  range: lvl(r[0]), optional: /opcional|alternativa/i.test(r[0]), name: inline(r[1]), where: inline(r[2]), why: inline(r[3]),
-}));
-const weapons = tableRows(sec('armas', 'Arma a distancia').md).map((r) => ({
-  range: lvl(r[0]), name: inline(r[1]), how: inline(r[2]), go: /^\**Sí/.test(r[3]), note: inline(r[3]),
-}));
-const gold = tableRows(sec('dinero', 'Objetivos').md).map((r) => ({ range: lvl(r[0]), what: inline(r[1]), cost: inline(r[2]) }));
+// ---------- Lineup nivel a nivel ----------
+// Base: guia/lineup.md. Se le añaden solos los hechizos (hechizos.md) y los talentos (talentos.md).
+const hash = (s) => { let h = 5381; for (const c of s) h = ((h * 33) ^ c.charCodeAt(0)) >>> 0; return h.toString(36); };
+
+const auto = {}; // nivel -> { train: [], talent: [], skip: [] }
+const slot = (l) => (auto[l] ||= { train: [], talent: [], skip: [] });
+
+for (const r of tableRows(readFileSync(join(docsDir, 'guia/hechizos.md'), 'utf8'))) {
+  const l = lvl(r[0])[0];
+  const note = r[2];
+  if (/^Sí/.test(note)) {
+    const rest = note.replace(/^Sí\.?\s*/, '').replace(/^\((.*)\)$/, '$1');
+    slot(l).train.push(inline(r[1]) + (rest ? ` <span class="note">${inline(rest)}</span>` : ''));
+  } else if (/^Saltar/.test(note)) {
+    slot(l).skip.push(inline(r[1]) + (note.length > 7 ? ` <span class="note">${inline(note.replace(/^Saltar\s*/, '').replace(/^\((.*)\)$/, '$1'))}</span>` : ''));
+  } else if (/opcional/i.test(note)) {
+    slot(l).train.push(inline(r[1]) + ` <span class="note">${inline(note)}</span>`);
+  }
+}
+for (const r of tableRows(byId.talentos.sections.find((s) => /^Leveo/.test(s.title)).md)) {
+  const [a, b] = lvl(r[0]);
+  const txt = strip(r[1]);
+  const m = txt.match(/^(.*?)\s(\d+)\/(\d+)(.*)$/);
+  const k = b - a + 1;
+  for (let i = 0; i < k; i++) {
+    const html = m ? `<strong>${esc(m[1])} ${+m[2] - k + 1 + i}/${m[3]}</strong>${esc(m[4])}` : inline(r[1]);
+    slot(a + i).talent.push(html);
+  }
+}
+
+const authored = {};
+let curL = null;
+for (const l of readFileSync(join(docsDir, 'guia/lineup.md'), 'utf8').replace(/\r/g, '').split('\n')) {
+  const h = l.match(/^##\s+(\d+)\s*(?:·\s*(.*))?$/);
+  if (h) { curL = +h[1]; authored[curL] = { title: (h[2] || '').trim(), items: [] }; continue; }
+  const it = l.match(/^-\s+([a-z]+):\s*(.*)$/);
+  if (it && curL) authored[curL].items.push({ tag: it[1], html: inline(it[2]) });
+}
+
+const lineup = [];
+let zone = '';
+for (let L = 1; L <= 60; L++) {
+  const a = authored[L] || { title: '', items: [] };
+  if (a.title) zone = a.title;
+  const x = auto[L] || { train: [], talent: [], skip: [] };
+  const lead = [];
+  let rest = a.items;
+  while (rest.length && rest[0].tag === 'zona') { lead.push(rest[0]); rest = rest.slice(1); }
+  const items = [
+    ...lead,
+    ...x.train.map((html) => ({ tag: 'entrenar', html })),
+    ...x.talent.map((html) => ({ tag: 'talento', html })),
+    ...rest,
+    ...x.skip.map((html) => ({ tag: 'saltar', html })),
+  ].map((it) => ({ ...it, id: `${L}-${hash(it.tag + it.html)}` }));
+  lineup.push({ lvl: L, title: a.title, zone, items });
+}
 
 // Estado
 const estadoSrc = readFileSync(join(docsDir, 'estado.md'), 'utf8');
@@ -194,37 +237,40 @@ const field = (k) => {
   return m ? m[1].trim() : '';
 };
 const estado = {
-  nombre: field('Nombre'), reino: field('Reino'), nivel: parseInt(field('Nivel'), 10) || 1,
-  zona: field('Zona actual'), oro: field('Oro'), mascota: field('Mascota activa'), arma: field('Arma a distancia'),
+  nombre: field('Nombre'), nivel: parseInt(field('Nivel'), 10) || 1, oro: field('Oro'),
 };
 
-// Huecos conocidos (CLAUDE.md)
-let huecos = '';
-try {
-  const c = readFileSync(join(root, 'CLAUDE.md'), 'utf8').replace(/\r/g, '');
-  const m = c.match(/## Huecos conocidos[^\n]*\n([\s\S]*?)(\n## |$)/);
-  if (m) huecos = md(m[1]);
-} catch { /* sin CLAUDE.md */ }
-
-// Hitos (curados a mano a partir de la guía)
-const milestones = [
-  [4, 'Primer entrenamiento: Serpent Sting y Aspect of the Monkey', 'hechizos'],
-  [6, 'Cooking y First Aid en Sen\'jin Village', 'profesiones'],
-  [10, '"Taming the Beast" con Thotar → doma Shal\'ma. Primer talento. Leatherworking en Orgrimmar', 'mascotas'],
-  [14, 'Empieza la Cozy Sleeping Bag: Burned-Out Remains (The Barrens 46 74)', 'sistemas'],
-  [18, 'Wailing Caverns con todas las misiones → Venomstrike. Multi-Shot', 'ruta'],
-  [20, 'Aimed Shot, Aspect of the Cheetah y Freezing Trap. Stonetalon: "Scramble" → Precision Bow o Moonsight Rifle', 'hechizos'],
-  [25, 'Summon Hawk (siempre dos fuera). Primer punto de Legacy → Frequent Flier', 'talentos'],
-  [29, 'Razorfen Kraul: Vengeful Fate → Quilboar Blaster', 'armas'],
-  [30, 'Feign Death e Intimidation', 'hechizos'],
-  [37, 'Doma a Broken Tooth en Badlands. Mascota hasta 60', 'mascotas'],
-  [40, 'Montura (~120 g con Xar\'Ti), Bestial Wrath y Truthseeker\'s Bow (25 libros)', 'dinero'],
-  [41, 'Big Game Hunter → Master Hunter\'s Bow o Rifle', 'armas'],
-  [44, 'Zul\'Farrak → Arch of the Covenant', 'ruta'],
-  [46, 'Maraudon: Corruption of Earth and Seed → Verdant Keeper\'s Aim', 'armas'],
-  [54, 'Lower Blackrock Spire → Blackcrow', 'armas'],
-  [60, 'Rellena el registro final de estado.md', 'estado'],
-];
+// ---------- Glosario + Wowhead ----------
+const whFile = join(here, 'wowhead', 'datos.json');
+const wh = existsSync(whFile) ? JSON.parse(readFileSync(whFile, 'utf8')) : {};
+const icons = {};
+const zoneName = Object.fromEntries(Object.entries(wh).filter(([, v]) => v.type === 'zone').map(([k, v]) => [v.id, k]));
+const glossary = parseGlossary(readFileSync(join(docsDir, 'guia/glosario.md'), 'utf8')).map((t) => {
+  const w = wh[t.name];
+  const e = { n: t.name, a: t.aliases, d: inline(t.desc), k: t.kind, s: t.section, id: slug(t.name) };
+  if (w && !w.none) {
+    e.u = w.url;
+    if (w.zone && zoneName[w.zone] && zoneName[w.zone] !== t.name) e.z = zoneName[w.zone];
+    if (w.quality != null && w.quality >= 0 && w.type === 'item') e.q = w.quality;
+    const lines = (w.lines || []).filter((l, i) => !(i === 0 && l === t.name));
+    if (lines.length) e.l = lines.map(esc);
+    const f = w.icon && join(here, 'wowhead', 'icons', w.icon + '.jpg');
+    if (f && existsSync(f)) {
+      icons[w.icon] ||= 'data:image/jpeg;base64,' + readFileSync(f).toString('base64');
+      e.i = w.icon;
+    }
+  }
+  if (!e.i) {
+    const gi = GENERIC_ICONS[t.kind];
+    const gf = gi && join(here, 'wowhead', 'icons', gi + '.jpg');
+    if (gf && existsSync(gf)) {
+      icons[gi] ||= 'data:image/jpeg;base64,' + readFileSync(gf).toString('base64');
+      e.i = gi;
+      e.gen = 1;
+    }
+  }
+  return e;
+});
 
 const DATA = {
   nav: docs.map((d) => ({ id: d.id, label: d.label })),
@@ -232,9 +278,8 @@ const DATA = {
     title: d.title, intro: d.intro,
     sections: d.sections.map(({ title, titleHtml, slug: s, html, text, range }) => ({ title, titleHtml, slug: s, html, text, range })),
   }])),
-  resumen, talents, spells, pets, weapons, gold, estado, huecos,
+  lineup, estado, glossary, icons,
   rutina: sec('sistemas', 'Rutina').html,
-  milestones: milestones.map(([l, t, p]) => ({ lvl: l, html: inline(t), page: p })),
   built: new Date().toISOString().slice(0, 16).replace('T', ' '),
 };
 
@@ -256,4 +301,4 @@ ${js}
 </script>
 `;
 writeFileSync(join(here, 'portal.html'), html);
-console.log(`portal.html generado (${(html.length / 1024).toFixed(0)} KB, nivel ${estado.nivel}, ${resumen.length} tramos, ${spells.length} filas de hechizos)`);
+console.log(`portal.html generado (${(html.length / 1024).toFixed(0)} KB, nivel ${estado.nivel}, ${lineup.reduce((n, l) => n + l.items.length, 0)} acciones en el lineup)`);

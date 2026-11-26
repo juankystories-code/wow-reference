@@ -1,0 +1,4170 @@
+{
+ "Durotar": {
+  "type": "zone",
+  "id": 14,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Durotar",
+   "Level 1-10",
+   "Type: Zone",
+   "Territory: Horde"
+  ],
+  "url": "https://www.wowhead.com/forever/zone=14"
+ },
+ "Burning Blade Coven": {
+  "type": "zone",
+  "id": 365,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Burning Blade Coven",
+   "Type: Zone",
+   "Territory: Contested"
+  ],
+  "url": "https://www.wowhead.com/forever/zone=365"
+ },
+ "Orgrimmar": {
+  "type": "zone",
+  "id": 1637,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Orgrimmar",
+   "Level 1-60",
+   "Type: City",
+   "Territory: Horde",
+   "Location: Durotar"
+  ],
+  "url": "https://www.wowhead.com/forever/zone=1637"
+ },
+ "The Barrens": {
+  "type": "zone",
+  "id": 17,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "The Barrens",
+   "Level 10-33",
+   "Type: Zone",
+   "Territory: Horde"
+  ],
+  "url": "https://www.wowhead.com/forever/zone=17"
+ },
+ "Thunder Bluff": {
+  "type": "zone",
+  "id": 1638,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Thunder Bluff",
+   "Level 1-60",
+   "Type: City",
+   "Territory: Horde"
+  ],
+  "url": "https://www.wowhead.com/forever/zone=1638"
+ },
+ "Westfall": {
+  "type": "zone",
+  "id": 40,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Westfall",
+   "Level 9-18",
+   "Type: Zone",
+   "Territory: Alliance"
+  ],
+  "url": "https://www.wowhead.com/forever/zone=40"
+ },
+ "Stonetalon Mountains": {
+  "type": "zone",
+  "id": 406,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Stonetalon Mountains",
+   "Level 15-25",
+   "Type: Zone",
+   "Territory: Contested"
+  ],
+  "url": "https://www.wowhead.com/forever/zone=406"
+ },
+ "Ashenvale": {
+  "type": "zone",
+  "id": 331,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Ashenvale",
+   "Level 19-30",
+   "Type: Zone",
+   "Territory: Contested"
+  ],
+  "url": "https://www.wowhead.com/forever/zone=331"
+ },
+ "Hillsbrad Foothills": {
+  "type": "zone",
+  "id": 267,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Hillsbrad Foothills",
+   "Level 20-31",
+   "Type: Zone",
+   "Territory: Contested"
+  ],
+  "url": "https://www.wowhead.com/forever/zone=267"
+ },
+ "Loch Modan": {
+  "type": "zone",
+  "id": 38,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Loch Modan",
+   "Level 10-18",
+   "Type: Zone",
+   "Territory: Alliance"
+  ],
+  "url": "https://www.wowhead.com/forever/zone=38"
+ },
+ "Wetlands": {
+  "type": "zone",
+  "id": 11,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Wetlands",
+   "Level 20-30",
+   "Type: Zone",
+   "Territory: Contested"
+  ],
+  "url": "https://www.wowhead.com/forever/zone=11"
+ },
+ "Arathi Highlands": {
+  "type": "zone",
+  "id": 45,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Arathi Highlands",
+   "Level 30-40",
+   "Type: Zone",
+   "Territory: Contested"
+  ],
+  "url": "https://www.wowhead.com/forever/zone=45"
+ },
+ "Undercity": {
+  "type": "zone",
+  "id": 1497,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Undercity",
+   "Level 1-60",
+   "Type: City",
+   "Territory: Horde"
+  ],
+  "url": "https://www.wowhead.com/forever/zone=1497"
+ },
+ "Silverpine Forest": {
+  "type": "zone",
+  "id": 130,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Silverpine Forest",
+   "Level 10-20",
+   "Type: Zone",
+   "Territory: Horde"
+  ],
+  "url": "https://www.wowhead.com/forever/zone=130"
+ },
+ "Thousand Needles": {
+  "type": "zone",
+  "id": 400,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Thousand Needles",
+   "Level 6-35",
+   "Type: Zone",
+   "Territory: Contested"
+  ],
+  "url": "https://www.wowhead.com/forever/zone=400"
+ },
+ "Stranglethorn Vale": {
+  "type": "zone",
+  "id": 33,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Stranglethorn Vale",
+   "Level 30-50",
+   "Type: Zone",
+   "Territory: Contested"
+  ],
+  "url": "https://www.wowhead.com/forever/zone=33"
+ },
+ "Desolace": {
+  "type": "zone",
+  "id": 405,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Desolace",
+   "Level 30-39",
+   "Type: Zone",
+   "Territory: Contested"
+  ],
+  "url": "https://www.wowhead.com/forever/zone=405"
+ },
+ "Badlands": {
+  "type": "zone",
+  "id": 3,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Badlands",
+   "Level 36-45",
+   "Type: Zone",
+   "Territory: Contested"
+  ],
+  "url": "https://www.wowhead.com/forever/zone=3"
+ },
+ "Dustwallow Marsh": {
+  "type": "zone",
+  "id": 15,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Dustwallow Marsh",
+   "Level 36-61",
+   "Type: Zone",
+   "Territory: Contested"
+  ],
+  "url": "https://www.wowhead.com/forever/zone=15"
+ },
+ "Riverglades": {
+  "type": "zone",
+  "id": 16591,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Riverglades",
+   "Level 36-44",
+   "Type: Zone",
+   "Territory: Contested"
+  ],
+  "url": "https://www.wowhead.com/forever/zone=16591"
+ },
+ "Tanaris": {
+  "type": "zone",
+  "id": 440,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Tanaris",
+   "Level 40-50",
+   "Type: Zone",
+   "Territory: Contested"
+  ],
+  "url": "https://www.wowhead.com/forever/zone=440"
+ },
+ "The Hinterlands": {
+  "type": "zone",
+  "id": 47,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "The Hinterlands",
+   "Level 41-56",
+   "Type: Zone",
+   "Territory: Contested"
+  ],
+  "url": "https://www.wowhead.com/forever/zone=47"
+ },
+ "Feralas": {
+  "type": "zone",
+  "id": 357,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Feralas",
+   "Level 41-60",
+   "Type: Zone",
+   "Territory: Contested"
+  ],
+  "url": "https://www.wowhead.com/forever/zone=357"
+ },
+ "Azshara": {
+  "type": "zone",
+  "id": 16,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Azshara",
+   "Level 42-55",
+   "Type: Zone",
+   "Territory: Contested"
+  ],
+  "url": "https://www.wowhead.com/forever/zone=16"
+ },
+ "Searing Gorge": {
+  "type": "zone",
+  "id": 51,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Searing Gorge",
+   "Level 43-56",
+   "Type: Zone",
+   "Territory: Contested"
+  ],
+  "url": "https://www.wowhead.com/forever/zone=51"
+ },
+ "Un'Goro Crater": {
+  "type": "zone",
+  "id": 490,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Un'Goro Crater",
+   "Level 48-55",
+   "Type: Zone",
+   "Territory: Contested"
+  ],
+  "url": "https://www.wowhead.com/forever/zone=490"
+ },
+ "Felwood": {
+  "type": "zone",
+  "id": 361,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Felwood",
+   "Level 47-54",
+   "Type: Zone",
+   "Territory: Contested"
+  ],
+  "url": "https://www.wowhead.com/forever/zone=361"
+ },
+ "Burning Steppes": {
+  "type": "zone",
+  "id": 46,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Burning Steppes",
+   "Level 50-59",
+   "Type: Zone",
+   "Territory: Contested"
+  ],
+  "url": "https://www.wowhead.com/forever/zone=46"
+ },
+ "Western Plaguelands": {
+  "type": "zone",
+  "id": 28,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Western Plaguelands",
+   "Level 46-57",
+   "Type: Zone",
+   "Territory: Contested"
+  ],
+  "url": "https://www.wowhead.com/forever/zone=28"
+ },
+ "Eastern Plaguelands": {
+  "type": "zone",
+  "id": 139,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Eastern Plaguelands",
+   "Level 54-59",
+   "Type: Zone",
+   "Territory: Contested"
+  ],
+  "url": "https://www.wowhead.com/forever/zone=139"
+ },
+ "Silithus": {
+  "type": "zone",
+  "id": 1377,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Silithus",
+   "Level 55-59",
+   "Type: Zone",
+   "Territory: Contested"
+  ],
+  "url": "https://www.wowhead.com/forever/zone=1377"
+ },
+ "Winterspring": {
+  "type": "zone",
+  "id": 618,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Winterspring",
+   "Level 55-60",
+   "Type: Zone",
+   "Territory: Contested"
+  ],
+  "url": "https://www.wowhead.com/forever/zone=618"
+ },
+ "Shen'dralas": {
+  "type": "zone",
+  "id": 16651,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Shen'dralas",
+   "Type: Zone",
+   "Territory: Contested"
+  ],
+  "url": "https://www.wowhead.com/forever/zone=16651"
+ },
+ "Mount Hyjal": {
+  "type": "zone",
+  "id": 616,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Mount Hyjal",
+   "Type: Zone",
+   "Territory: Contested"
+  ],
+  "url": "https://www.wowhead.com/forever/zone=616"
+ },
+ "Ragefire Chasm": {
+  "type": "zone",
+  "id": 2437,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Ragefire Chasm",
+   "Level 15-25",
+   "Type: Dungeon",
+   "Territory: Horde",
+   "Location: Orgrimmar"
+  ],
+  "url": "https://www.wowhead.com/forever/zone=2437"
+ },
+ "Wailing Caverns": {
+  "type": "zone",
+  "id": 718,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Wailing Caverns",
+   "Level 17-27",
+   "Type: Dungeon",
+   "Territory: Horde",
+   "Location: The Barrens"
+  ],
+  "url": "https://www.wowhead.com/forever/zone=718"
+ },
+ "Blackfathom Deeps": {
+  "type": "zone",
+  "id": 719,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Blackfathom Deeps",
+   "Level 22-32",
+   "Type: Dungeon",
+   "Territory: Contested",
+   "Location: Ashenvale"
+  ],
+  "url": "https://www.wowhead.com/forever/zone=719"
+ },
+ "Razorfen Kraul": {
+  "type": "zone",
+  "id": 491,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Razorfen Kraul",
+   "Level 32-42",
+   "Type: Dungeon",
+   "Territory: Horde"
+  ],
+  "url": "https://www.wowhead.com/forever/zone=491"
+ },
+ "Scarlet Monastery": {
+  "type": "zone",
+  "id": 796,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Scarlet Monastery",
+   "Level 26-45",
+   "Type: Dungeon",
+   "Territory: Horde",
+   "Location: Tirisfal Glades"
+  ],
+  "url": "https://www.wowhead.com/forever/zone=796"
+ },
+ "Krol'dok Stronghold": {
+  "type": "zone",
+  "id": 16842,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Krol'dok Stronghold",
+   "Type: Dungeon",
+   "Territory: Contested"
+  ],
+  "url": "https://www.wowhead.com/forever/zone=16842"
+ },
+ "Uldaman": {
+  "type": "zone",
+  "id": 1337,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Uldaman",
+   "Level 42-52",
+   "Type: Dungeon",
+   "Territory: Contested",
+   "Location: Badlands"
+  ],
+  "url": "https://www.wowhead.com/forever/zone=1337"
+ },
+ "Zul'Farrak": {
+  "type": "zone",
+  "id": 1176,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Zul'Farrak",
+   "Level 46-56",
+   "Type: Dungeon",
+   "Territory: Contested",
+   "Location: Tanaris"
+  ],
+  "url": "https://www.wowhead.com/forever/zone=1176"
+ },
+ "Maraudon": {
+  "type": "zone",
+  "id": 2100,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Maraudon",
+   "Level 42-52",
+   "Type: Dungeon",
+   "Territory: Contested",
+   "Location: Desolace"
+  ],
+  "url": "https://www.wowhead.com/forever/zone=2100"
+ },
+ "Stratholme": {
+  "type": "zone",
+  "id": 2017,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Stratholme",
+   "Level 48-58",
+   "Type: Dungeon",
+   "Territory: Contested",
+   "Location: Eastern Plaguelands"
+  ],
+  "url": "https://www.wowhead.com/forever/zone=2017"
+ },
+ "Kaltunk": {
+  "type": "npc",
+  "id": 10176,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Kaltunk",
+   "Level 20 Humanoid (Normal)",
+   "Orgrimmar"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=10176",
+  "zone": 14
+ },
+ "Gornek": {
+  "type": "npc",
+  "id": 3143,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Gornek",
+   "Level 5 Humanoid (Normal)",
+   "Orgrimmar"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=3143",
+  "zone": 14
+ },
+ "Hana'zua": {
+  "type": "npc",
+  "id": 3287,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Hana'zua",
+   "Level 2 Humanoid (Normal)",
+   "Darkspear Trolls"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=3287",
+  "zone": 14
+ },
+ "Sarkoth": {
+  "type": "npc",
+  "id": 3281,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Sarkoth",
+   "Level 4 Beast (Normal)",
+   "Scorpid"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=3281",
+  "zone": 14
+ },
+ "Zureetha Fargaze": {
+  "type": "npc",
+  "id": 3145,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Zureetha Fargaze",
+   "Level 12 Humanoid (Normal)",
+   "Orgrimmar"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=3145",
+  "zone": 14
+ },
+ "Galgar": {
+  "type": "npc",
+  "id": 9796,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Galgar",
+   "Level 8 Humanoid (Normal)",
+   "Orgrimmar"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=9796",
+  "zone": 14
+ },
+ "Foreman Thazz'ril": {
+  "type": "npc",
+  "id": 11378,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Foreman Thazz'ril",
+   "Level 4 Humanoid (Normal)",
+   "Orgrimmar"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=11378",
+  "zone": 14
+ },
+ "Yarrog Baneshadow": {
+  "type": "npc",
+  "id": 3183,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Yarrog Baneshadow",
+   "Level 5 Humanoid (Normal)"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=3183",
+  "zone": 14
+ },
+ "Jen'shan": {
+  "type": "npc",
+  "id": 3154,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Jen'shan",
+   "Hunter Trainer",
+   "Level 8 Humanoid (Normal)",
+   "Darkspear Trolls"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=3154",
+  "zone": 14
+ },
+ "Ukor": {
+  "type": "npc",
+  "id": 6786,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Ukor",
+   "Level 4 Humanoid (Normal)",
+   "Orgrimmar"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=6786",
+  "zone": 14
+ },
+ "Master Gadrin": {
+  "type": "npc",
+  "id": 3188,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Master Gadrin",
+   "Level 12 Humanoid (Normal)",
+   "Darkspear Trolls"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=3188",
+  "zone": 14
+ },
+ "Master Vornal": {
+  "type": "npc",
+  "id": 3304,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Master Vornal",
+   "Level 11 Humanoid (Normal)",
+   "Darkspear Trolls"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=3304",
+  "zone": 14
+ },
+ "Orgnil Soulscar": {
+  "type": "npc",
+  "id": 3142,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Orgnil Soulscar",
+   "Level 18 Humanoid (Normal)",
+   "Orgrimmar"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=3142",
+  "zone": 14
+ },
+ "Innkeeper Grosk": {
+  "type": "npc",
+  "id": 6928,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Innkeeper Grosk",
+   "Innkeeper",
+   "Level 30 Humanoid (Normal)",
+   "Orgrimmar"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=6928",
+  "zone": 14
+ },
+ "Gar'Thok": {
+  "type": "npc",
+  "id": 3139,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Gar'Thok",
+   "Level 10 Humanoid (Normal)",
+   "Orgrimmar"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=3139",
+  "zone": 14
+ },
+ "Furl Scornbrow": {
+  "type": "npc",
+  "id": 3147,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Furl Scornbrow",
+   "Level 6 Humanoid (Normal)",
+   "Orgrimmar"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=3147",
+  "zone": 14
+ },
+ "Lieutenant Benedict": {
+  "type": "npc",
+  "id": 3192,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Lieutenant Benedict",
+   "Level 8 Humanoid (Normal)"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=3192",
+  "zone": 14
+ },
+ "Thotar": {
+  "type": "npc",
+  "id": 3171,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Thotar",
+   "Hunter Trainer",
+   "Level 16 Humanoid (Normal)",
+   "Orgrimmar"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=3171",
+  "zone": 14
+ },
+ "Ormak Grimshot": {
+  "type": "npc",
+  "id": 3352,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Ormak Grimshot",
+   "Hunter Trainer",
+   "Level 60 Humanoid (Normal)",
+   "Orgrimmar"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=3352",
+  "zone": 1637
+ },
+ "Shal'ma": {
+  "type": "npc",
+  "id": 276198,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Shal'ma",
+   "Level 9 Beast (Rare)",
+   "Cat"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=276198",
+  "zone": 14
+ },
+ "Raluk": {
+  "type": "npc",
+  "id": 208124,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Raluk",
+   "Level 7 Beast (Rare)",
+   "Cat"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=208124",
+  "zone": 14
+ },
+ "Venomtail Scorpid": {
+  "type": "npc",
+  "id": 3127,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Venomtail Scorpid",
+   "Level 9 - 10 Beast (Normal)",
+   "Scorpid"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=3127",
+  "zone": 14
+ },
+ "Scorpid Worker": {
+  "type": "npc",
+  "id": 3124,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Scorpid Worker",
+   "Level 3 Beast (Normal)",
+   "Scorpid"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=3124",
+  "zone": 14
+ },
+ "Mottled Boar": {
+  "type": "npc",
+  "id": 3098,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Mottled Boar",
+   "Level 1 - 2 Beast (Normal)",
+   "Boar"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=3098",
+  "zone": 14
+ },
+ "Dire Mottled Boar": {
+  "type": "npc",
+  "id": 3099,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Dire Mottled Boar",
+   "Level 6 - 7 Beast (Normal)",
+   "Boar"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=3099",
+  "zone": 1637
+ },
+ "Surf Crawler": {
+  "type": "npc",
+  "id": 3107,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Surf Crawler",
+   "Level 7 - 8 Beast (Normal)",
+   "Crab"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=3107",
+  "zone": 14
+ },
+ "Armored Scorpid": {
+  "type": "npc",
+  "id": 3126,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Armored Scorpid",
+   "Level 7 - 8 Beast (Normal)",
+   "Scorpid"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=3126",
+  "zone": 14
+ },
+ "Hanashi": {
+  "type": "npc",
+  "id": 2704,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Hanashi",
+   "Weapon Master",
+   "Level 50 Humanoid (Normal)",
+   "Darkspear Trolls"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=2704",
+  "zone": 1637
+ },
+ "Sayoc": {
+  "type": "npc",
+  "id": 11868,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Sayoc",
+   "Weapon Master",
+   "Level 50 Humanoid (Elite)",
+   "Orgrimmar"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=11868",
+  "zone": 1637
+ },
+ "Archibald": {
+  "type": "npc",
+  "id": 11870,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Archibald",
+   "Weapon Master",
+   "Level 50 Humanoid (Elite)",
+   "Undercity"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=11870",
+  "zone": 1497
+ },
+ "Innkeeper Boorand Plainswind": {
+  "type": "npc",
+  "id": 3934,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Innkeeper Boorand Plainswind",
+   "Innkeeper",
+   "Level 30 Humanoid (Normal)",
+   "Orgrimmar"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=3934",
+  "zone": 17
+ },
+ "Devrak": {
+  "type": "npc",
+  "id": 3615,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Devrak",
+   "Wind Rider Master",
+   "Level 55 Humanoid (Elite)",
+   "Orgrimmar"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=3615",
+  "zone": 17
+ },
+ "Bragok": {
+  "type": "npc",
+  "id": 16227,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Bragok",
+   "Flight Master",
+   "Level 55 Humanoid (Elite)",
+   "Ratchet"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=16227",
+  "zone": 17
+ },
+ "Dishu": {
+  "type": "npc",
+  "id": 5865,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Dishu",
+   "Level 13 Beast (Rare)",
+   "Cat"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=5865",
+  "zone": 17
+ },
+ "Humar the Pridelord": {
+  "type": "npc",
+  "id": 5828,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Humar the Pridelord",
+   "Level 23 Beast (Rare Elite)",
+   "Cat"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=5828",
+  "zone": 17
+ },
+ "Nara Wildmane": {
+  "type": "npc",
+  "id": 5770,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Nara Wildmane",
+   "Level 55 Humanoid (Normal)"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=5770",
+  "zone": 1638
+ },
+ "Apothecary Zamah": {
+  "type": "npc",
+  "id": 3419,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Apothecary Zamah",
+   "Royal Apothecary Society",
+   "Level 22 Humanoid (Normal)",
+   "Undercity"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=3419",
+  "zone": 1638
+ },
+ "Lord Serpentis": {
+  "type": "npc",
+  "id": 3673,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Lord Serpentis",
+   "Fanglord",
+   "Level 21 Humanoid (Elite)"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=3673",
+  "zone": 718
+ },
+ "Omusa Thunderhorn": {
+  "type": "npc",
+  "id": 10378,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Omusa Thunderhorn",
+   "Wind Rider Master",
+   "Level 55 Humanoid (Elite)",
+   "Thunder Bluff"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=10378",
+  "zone": 17
+ },
+ "Jorn Skyseer": {
+  "type": "npc",
+  "id": 3387,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Jorn Skyseer",
+   "Level 32 Humanoid (Normal)"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=3387",
+  "zone": 17
+ },
+ "Hezrul Bloodmark": {
+  "type": "npc",
+  "id": 3396,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Hezrul Bloodmark",
+   "Level 19 Humanoid (Normal)"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=3396",
+  "zone": 17
+ },
+ "Serena Bloodfeather": {
+  "type": "npc",
+  "id": 3452,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Serena Bloodfeather",
+   "Level 20 Humanoid (Normal)"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=3452",
+  "zone": 17
+ },
+ "Tharm": {
+  "type": "npc",
+  "id": 4312,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Tharm",
+   "Wind Rider Master",
+   "Level 55 Humanoid (Elite)",
+   "Thunder Bluff"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=4312",
+  "zone": 406
+ },
+ "Goggeroc": {
+  "type": "npc",
+  "id": 11920,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Goggeroc",
+   "Level 20 Humanoid (Elite)"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=11920",
+  "zone": 406
+ },
+ "Besseleth": {
+  "type": "npc",
+  "id": 11921,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Besseleth",
+   "Level 21 Beast (Elite)",
+   "Spider"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=11921",
+  "zone": 406
+ },
+ "Vhulgra": {
+  "type": "npc",
+  "id": 12616,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Vhulgra",
+   "Wind Rider Master",
+   "Level 55 Humanoid (Elite)",
+   "Orgrimmar"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=12616",
+  "zone": 331
+ },
+ "Andruk": {
+  "type": "npc",
+  "id": 11901,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Andruk",
+   "Wind Rider Master",
+   "Level 55 Humanoid (Elite)",
+   "Orgrimmar"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=11901",
+  "zone": 331
+ },
+ "Mist Howler": {
+  "type": "npc",
+  "id": 10644,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Mist Howler",
+   "Level 22 Beast (Rare)",
+   "Wolf"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=10644",
+  "zone": 331
+ },
+ "Mahren Skyseer": {
+  "type": "npc",
+  "id": 3388,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Mahren Skyseer",
+   "Level 32 Humanoid (Normal)"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=3388",
+  "zone": 17
+ },
+ "Nyse": {
+  "type": "npc",
+  "id": 4317,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Nyse",
+   "Wind Rider Master",
+   "Level 55 Humanoid (Elite)",
+   "Thunder Bluff"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=4317",
+  "zone": 400
+ },
+ "Thysta": {
+  "type": "npc",
+  "id": 1387,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Thysta",
+   "Wind Rider Master",
+   "Level 55 Humanoid (Elite)",
+   "Orgrimmar"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=1387",
+  "zone": 33
+ },
+ "Kragg": {
+  "type": "npc",
+  "id": 1404,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Kragg",
+   "Hunter Trainer",
+   "Level 40 Humanoid (Normal)",
+   "Orgrimmar"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=1404",
+  "zone": 33
+ },
+ "Thalon": {
+  "type": "npc",
+  "id": 6726,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Thalon",
+   "Wind Rider Master",
+   "Level 55 Humanoid (Elite)",
+   "Thunder Bluff"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=6726",
+  "zone": 405
+ },
+ "Wulan": {
+  "type": "npc",
+  "id": 12033,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Wulan",
+   "Cooking Supplies",
+   "Level 30 Humanoid (Normal)",
+   "Darkspear Trolls"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=12033",
+  "zone": 405
+ },
+ "Gorrik": {
+  "type": "npc",
+  "id": 2861,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Gorrik",
+   "Wind Rider Master",
+   "Level 55 Humanoid (Elite)",
+   "Orgrimmar"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=2861",
+  "zone": 3
+ },
+ "Broken Tooth": {
+  "type": "npc",
+  "id": 2850,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Broken Tooth",
+   "Level 37 Beast (Rare)",
+   "Cat"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=2850",
+  "zone": 3
+ },
+ "King Bangalash": {
+  "type": "npc",
+  "id": 731,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "King Bangalash",
+   "Level 43 Beast (Elite)",
+   "Cat"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=731",
+  "zone": 33
+ },
+ "Bulkrek Ragefist": {
+  "type": "npc",
+  "id": 7824,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Bulkrek Ragefist",
+   "Wind Rider Master",
+   "Level 55 Humanoid (Elite)",
+   "Orgrimmar"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=7824",
+  "zone": 440
+ },
+ "Dirge Quikcleave": {
+  "type": "npc",
+  "id": 8125,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Dirge Quikcleave",
+   "Butcher",
+   "Level 43 Humanoid (Normal)",
+   "Gadgetzan"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=8125",
+  "zone": 440
+ },
+ "Xar'Ti": {
+  "type": "npc",
+  "id": 7953,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Xar'Ti",
+   "Raptor Riding Trainer",
+   "Level 50 Humanoid (Normal)",
+   "Darkspear Trolls"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=7953",
+  "zone": 14
+ },
+ "Zjolnir": {
+  "type": "npc",
+  "id": 7952,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Zjolnir",
+   "Raptor Handler",
+   "Level 45 Humanoid (Normal)",
+   "Darkspear Trolls"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=7952",
+  "zone": 14
+ },
+ "Karolek": {
+  "type": "npc",
+  "id": 3365,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Karolek",
+   "Expert Leatherworker",
+   "Level 35 Humanoid (Normal)",
+   "Orgrimmar"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=3365",
+  "zone": 1637
+ },
+ "Hahrana Ironhide": {
+  "type": "npc",
+  "id": 11098,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Hahrana Ironhide",
+   "Master Leatherworker",
+   "Level 55 Humanoid (Normal)",
+   "Thunder Bluff"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=11098",
+  "zone": 357
+ },
+ "Balai Lok'Wein": {
+  "type": "npc",
+  "id": 13476,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Balai Lok'Wein",
+   "Potions, Scrolls and Reagents",
+   "Level 43 Humanoid (Normal)",
+   "Orgrimmar"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=13476",
+  "zone": 15
+ },
+ "Doctor Gregory Victor": {
+  "type": "npc",
+  "id": 12920,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Doctor Gregory Victor",
+   "Trauma Surgeon",
+   "Level 48 Humanoid (Normal)",
+   "Undercity"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=12920",
+  "zone": 45
+ },
+ "Old Man Heming": {
+  "type": "npc",
+  "id": 2626,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Old Man Heming",
+   "Fisherman",
+   "Level 43 Humanoid (Normal)",
+   "Booty Bay"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=2626",
+  "zone": 33
+ },
+ "Georgia": {
+  "type": "npc",
+  "id": 12636,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Georgia",
+   "Bat Handler",
+   "Level 55 Humanoid (Elite)",
+   "Undercity"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=12636",
+  "zone": 139
+ },
+ "Nathanos Blightcaller": {
+  "type": "npc",
+  "id": 11878,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Nathanos Blightcaller",
+   "Champion of the Banshee Queen",
+   "Level 62 Humanoid (Elite)",
+   "Orgrimmar"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=11878",
+  "zone": 139
+ },
+ "Shadow Hunter Vosh'gajin": {
+  "type": "npc",
+  "id": 9236,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Shadow Hunter Vosh'gajin",
+   "Level 58 Humanoid (Elite)"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=9236",
+  "zone": 1583
+ },
+ "Ta'shkal": {
+  "type": "npc",
+  "id": 268231,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Ta'shkal",
+   "Escaped Experiment",
+   "Level 57 - 58 Beast (Normal)",
+   "Cat"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=268231",
+  "zone": 616
+ },
+ "Pix Xizzix": {
+  "type": "npc",
+  "id": 227853,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Pix Xizzix",
+   "Undermine Trader",
+   "Level 60 Humanoid (Normal)"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=227853",
+  "zone": 33
+ },
+ "Black Bear Patriarch": {
+  "type": "npc",
+  "id": 1189,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Black Bear Patriarch",
+   "Level 16 - 17 Beast (Normal)",
+   "Bear"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=1189",
+  "zone": 38
+ },
+ "Prairie Wolf Alpha": {
+  "type": "npc",
+  "id": 2960,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Prairie Wolf Alpha",
+   "Level 9 - 10 Beast (Normal)",
+   "Wolf"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=2960",
+  "zone": 215
+ },
+ "Stranglethorn Tiger": {
+  "type": "npc",
+  "id": 682,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Stranglethorn Tiger",
+   "Level 32 - 33 Beast (Normal)",
+   "Cat"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=682",
+  "zone": 33
+ },
+ "Kraul Bat": {
+  "type": "npc",
+  "id": 4538,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Kraul Bat",
+   "Level 30 - 31 Beast (Elite)",
+   "Bat"
+  ],
+  "url": "https://www.wowhead.com/forever/npc=4538",
+  "zone": 491
+ },
+ "Hearthstone": {
+  "type": "item",
+  "id": 6948,
+  "icon": "inv_misc_rune_01",
+  "quality": 1,
+  "lines": [
+   "Hearthstone",
+   "Item Level 1",
+   "Binds when picked up",
+   "Unique",
+   "Use: Returns you to Hearthstone Location. Speak to an Innkeeper in a different place to change your home location."
+  ],
+  "url": "https://www.wowhead.com/forever/item=6948"
+ },
+ "Foreman's Blackjack": {
+  "type": "item",
+  "id": 16114,
+  "icon": "inv_mace_11",
+  "quality": 1,
+  "lines": [
+   "Foreman's Blackjack",
+   "Item Level 1",
+   "Quest Item",
+   "Unique",
+   "Use: Wakes up a targeted sleeping peon. (5 Sec Cooldown)"
+  ],
+  "url": "https://www.wowhead.com/forever/item=16114"
+ },
+ "Burning Blade Medallion": {
+  "type": "item",
+  "id": 4859,
+  "icon": "inv_jewelry_talisman_01",
+  "quality": 1,
+  "lines": [
+   "Burning Blade Medallion",
+   "Item Level 1",
+   "Quest Item",
+   "Unique",
+   "Dropped by: Yarrog Baneshadow",
+   "Drop Chance: 71.94%"
+  ],
+  "url": "https://www.wowhead.com/forever/item=4859"
+ },
+ "Venomstrike": {
+  "type": "item",
+  "id": 6469,
+  "icon": "inv_weapon_bow_10",
+  "quality": 3,
+  "lines": [
+   "Venomstrike",
+   "Item Level 24",
+   "Binds when picked up",
+   "Ranged Bow",
+   "20 - 38 Damage",
+   "Speed 2.40",
+   "(12.08 damage per second)",
+   "Durability 65 / 65",
+   "Requires Level 19",
+   "Chance on hit: Venom Shot the target for 23 to 33 Nature damage.",
+   "Dropped by: Lord Serpentis",
+   "Drop Chance: 15.49%"
+  ],
+  "url": "https://www.wowhead.com/forever/item=6469"
+ },
+ "Barbaric Crossbow": {
+  "type": "item",
+  "id": 272999,
+  "icon": "inv_weapon_crossbow_02",
+  "quality": 3,
+  "lines": [
+   "Barbaric Crossbow",
+   "Item Level 18",
+   "Binds when picked up",
+   "Ranged Crossbow",
+   "15 - 23 Damage",
+   "Speed 2.00",
+   "(9.50 damage per second)",
+   "Durability 50 / 50",
+   "Requires Level 13",
+   "Chance on hit: Wounds the target for 14 Physical damage.",
+   "Dropped by: Oggleflint",
+   "Drop Chance: 30.90%"
+  ],
+  "url": "https://www.wowhead.com/forever/item=272999"
+ },
+ "Precision Bow": {
+  "type": "item",
+  "id": 217315,
+  "icon": "inv_weapon_bow_04",
+  "quality": 2,
+  "lines": [
+   "Precision Bow",
+   "Item Level 27",
+   "Binds when picked up",
+   "Ranged Bow",
+   "20 - 37 Damage",
+   "Speed 2.60",
+   "(10.96 damage per second)",
+   "Durability 60 / 60",
+   "Requires Level 23",
+   "Equip: Improves your chance to hit by 0.3%."
+  ],
+  "url": "https://www.wowhead.com/forever/item=217315"
+ },
+ "Moonsight Rifle": {
+  "type": "item",
+  "id": 4383,
+  "icon": "inv_weapon_rifle_06",
+  "quality": 2,
+  "lines": [
+   "Moonsight Rifle",
+   "Item Level 29",
+   "Binds when equipped",
+   "Ranged Gun",
+   "14 - 26 Damage",
+   "Speed 1.70",
+   "(11.76 damage per second)",
+   "Durability 65 / 65",
+   "Requires Level 24",
+   "Equip: Improves your chance to hit by 0.3%."
+  ],
+  "url": "https://www.wowhead.com/forever/item=4383"
+ },
+ "Feathered Arrow": {
+  "type": "item",
+  "id": 3464,
+  "icon": "inv_ammo_arrow_02",
+  "quality": 2,
+  "lines": [
+   "Feathered Arrow",
+   "Item Level 35",
+   "Ammo Arrow",
+   "Adds 9.5 damage per second",
+   "Max Stack: 200"
+  ],
+  "url": "https://www.wowhead.com/forever/item=3464"
+ },
+ "Naga Heartpiercer": {
+  "type": "item",
+  "id": 3078,
+  "icon": "inv_weapon_bow_04",
+  "quality": 3,
+  "lines": [
+   "Naga Heartpiercer",
+   "Item Level 27",
+   "Binds when picked up",
+   "Ranged Bow",
+   "22 - 42 Damage",
+   "Speed 2.40",
+   "(13.33 damage per second)",
+   "Durability 70 / 70",
+   "Requires Level 22",
+   "Chance on hit: Wounds the target for 42 damage. Naga are Stunned for 2 sec.",
+   "Dropped by: Lady Sarevess",
+   "Drop Chance: 30.07%"
+  ],
+  "url": "https://www.wowhead.com/forever/item=3078"
+ },
+ "Quilboar Blaster": {
+  "type": "item",
+  "id": 274084,
+  "icon": "inv_weapon_rifle_05",
+  "quality": 3,
+  "lines": [
+   "Quilboar Blaster",
+   "Item Level 36",
+   "Binds when picked up",
+   "Ranged Gun",
+   "36 - 68 Damage",
+   "Speed 2.80",
+   "(18.57 damage per second)",
+   "+4 Agility",
+   "+4 Spirit",
+   "Durability 75 / 75"
+  ],
+  "url": "https://www.wowhead.com/forever/item=274084"
+ },
+ "Spellsever Crossbow": {
+  "type": "item",
+  "id": 274293,
+  "icon": "inv_weapon_crossbow_07",
+  "quality": 3,
+  "lines": [
+   "Spellsever Crossbow",
+   "Item Level 39",
+   "Binds when picked up",
+   "Ranged Crossbow",
+   "40 - 60 Damage",
+   "Speed 2.40",
+   "(20.83 damage per second)",
+   "Durability 75 / 75",
+   "Requires Level 34",
+   "Equip: +8 Attack Power.",
+   "Chance on hit: Launch a magic severing bolt at the target, dealing 36 Physical damage and interrupting the spell being cast for 5 sec.",
+   "Dropped by: Arcanist Doan",
+   "Drop Chance: 29.63%"
+  ],
+  "url": "https://www.wowhead.com/forever/item=274293"
+ },
+ "Frosty Blunderbuss": {
+  "type": "item",
+  "id": 274604,
+  "icon": "inv_weapon_rifle_03",
+  "quality": 3,
+  "lines": [
+   "Frosty Blunderbuss",
+   "Item Level 40",
+   "Binds when picked up",
+   "Ranged Gun",
+   "41 - 78 Damage",
+   "Speed 2.80",
+   "(21.25 damage per second)",
+   "+4 Stamina",
+   "Durability 75 / 75",
+   "Requires Level 35",
+   "Equip: +10 Attack Power.",
+   "Dropped by: Captain Dreadrise",
+   "Drop Chance: 32.94%"
+  ],
+  "url": "https://www.wowhead.com/forever/item=274604"
+ },
+ "Sidegunner Shottie": {
+  "type": "item",
+  "id": 15691,
+  "icon": "inv_weapon_rifle_04",
+  "quality": 2,
+  "lines": [
+   "Sidegunner Shottie",
+   "Item Level 38",
+   "Binds when picked up",
+   "Ranged Gun",
+   "32 - 61 Damage",
+   "Speed 2.90",
+   "(16.03 damage per second)",
+   "+3 Strength",
+   "+3 Agility",
+   "Durability 65 / 65"
+  ],
+  "url": "https://www.wowhead.com/forever/item=15691"
+ },
+ "Blasting Hackbut": {
+  "type": "item",
+  "id": 6798,
+  "icon": "inv_weapon_rifle_04",
+  "quality": 2,
+  "lines": [
+   "Blasting Hackbut",
+   "Item Level 37",
+   "Binds when picked up",
+   "Ranged Gun",
+   "30 - 56 Damage",
+   "Speed 2.80",
+   "(15.36 damage per second)",
+   "+3 Agility",
+   "+4 Stamina",
+   "Durability 65 / 65"
+  ],
+  "url": "https://www.wowhead.com/forever/item=6798"
+ },
+ "Bow of Plunder": {
+  "type": "item",
+  "id": 3742,
+  "icon": "inv_weapon_bow_02",
+  "quality": 2,
+  "lines": [
+   "Bow of Plunder",
+   "Item Level 28",
+   "Binds when picked up",
+   "Ranged Bow",
+   "20 - 39 Damage",
+   "Speed 2.60",
+   "(11.35 damage per second)",
+   "+2 Agility",
+   "+2 Stamina",
+   "Durability 60 / 60"
+  ],
+  "url": "https://www.wowhead.com/forever/item=3742"
+ },
+ "Truthseeker's Bow": {
+  "type": "item",
+  "id": 277254,
+  "icon": "inv_weapon_bow_01",
+  "quality": 3,
+  "lines": [
+   "Truthseeker's Bow",
+   "Item Level 45",
+   "Binds when picked up",
+   "Ranged Bow",
+   "46 - 87 Damage",
+   "Speed 2.80",
+   "(23.75 damage per second)",
+   "+7 Agility",
+   "+3 Stamina",
+   "Durability 75 / 75",
+   "Requires Level 40"
+  ],
+  "url": "https://www.wowhead.com/forever/item=277254"
+ },
+ "Master Hunter's Bow": {
+  "type": "item",
+  "id": 17686,
+  "icon": "inv_weapon_bow_11",
+  "quality": 2,
+  "lines": [
+   "Master Hunter's Bow",
+   "Item Level 43",
+   "Binds when picked up",
+   "Ranged Bow",
+   "32 - 61 Damage",
+   "Speed 2.40",
+   "(19.38 damage per second)",
+   "+6 Agility",
+   "Durability 65 / 65"
+  ],
+  "url": "https://www.wowhead.com/forever/item=17686"
+ },
+ "Master Hunter's Rifle": {
+  "type": "item",
+  "id": 17687,
+  "icon": "inv_weapon_rifle_05",
+  "quality": 2,
+  "lines": [
+   "Master Hunter's Rifle",
+   "Item Level 43",
+   "Binds when picked up",
+   "Ranged Gun",
+   "35 - 66 Damage",
+   "Speed 2.60",
+   "(19.42 damage per second)",
+   "+4 Strength",
+   "+4 Agility",
+   "Durability 65 / 65"
+  ],
+  "url": "https://www.wowhead.com/forever/item=17687"
+ },
+ "Arch of the Covenant": {
+  "type": "item",
+  "id": 274646,
+  "icon": "inv_weapon_bow_15",
+  "quality": 3,
+  "lines": [
+   "Arch of the Covenant",
+   "Item Level 47",
+   "Binds when picked up",
+   "Ranged Bow",
+   "44 - 84 Damage",
+   "Speed 2.60",
+   "(24.62 damage per second)",
+   "+5 Agility",
+   "+6 Nature Resistance",
+   "Durability 75 / 75",
+   "Requires Level 42",
+   "Dropped by: Sergeant Bly",
+   "Drop Chance: 31.09%"
+  ],
+  "url": "https://www.wowhead.com/forever/item=274646"
+ },
+ "Galgann's Fireblaster": {
+  "type": "item",
+  "id": 9412,
+  "icon": "inv_weapon_rifle_07",
+  "quality": 3,
+  "lines": [
+   "Galgann's Fireblaster",
+   "Item Level 47",
+   "Binds when picked up",
+   "Ranged Gun",
+   "44 - 84 Damage",
+   "Speed 2.60",
+   "(24.62 damage per second)",
+   "Durability 75 / 75",
+   "Requires Level 42",
+   "Chance on hit: Strike your ranged target with a Fire Blast for 22 to 34 Fire damage.",
+   "Dropped by: Galgann Firehammer",
+   "Drop Chance: 23.01%"
+  ],
+  "url": "https://www.wowhead.com/forever/item=9412"
+ },
+ "Verdant Keeper's Aim": {
+  "type": "item",
+  "id": 17753,
+  "icon": "inv_weapon_bow_03",
+  "quality": 3,
+  "lines": [
+   "Verdant Keeper's Aim",
+   "Item Level 53",
+   "Binds when picked up",
+   "Ranged Bow",
+   "53 - 100 Damage",
+   "Speed 2.80",
+   "(27.32 damage per second)",
+   "Durability 75 / 75",
+   "Chance on hit: Strike your target with Keeper's Sting for 23 to 33 Nature damage."
+  ],
+  "url": "https://www.wowhead.com/forever/item=17753"
+ },
+ "Thorium Rifle": {
+  "type": "item",
+  "id": 15995,
+  "icon": "inv_weapon_rifle_07",
+  "quality": 2,
+  "lines": [
+   "Thorium Rifle",
+   "Item Level 52",
+   "Binds when equipped",
+   "Ranged Gun",
+   "42 - 79 Damage",
+   "Speed 2.50",
+   "(24.20 damage per second)",
+   "+17 Ranged Attack Power",
+   "Durability 65 / 65",
+   "Requires Level 47"
+  ],
+  "url": "https://www.wowhead.com/forever/item=15995"
+ },
+ "Dark Iron Rifle": {
+  "type": "item",
+  "id": 16004,
+  "icon": "inv_weapon_rifle_08",
+  "quality": 3,
+  "lines": [
+   "Dark Iron Rifle",
+   "Item Level 55",
+   "Binds when equipped",
+   "Ranged Gun",
+   "53 - 100 Damage",
+   "Speed 2.70",
+   "(28.33 damage per second)",
+   "Durability 75 / 75",
+   "Requires Level 50",
+   "Chance on hit: Fires a Shadow Shot at the target for 21 to 31 Shadow damage."
+  ],
+  "url": "https://www.wowhead.com/forever/item=16004"
+ },
+ "Megashot Rifle": {
+  "type": "item",
+  "id": 17717,
+  "icon": "inv_weapon_rifle_05",
+  "quality": 3,
+  "lines": [
+   "Megashot Rifle",
+   "Item Level 53",
+   "Binds when picked up",
+   "Ranged Gun",
+   "48 - 89 Damage",
+   "Speed 2.50",
+   "(27.40 damage per second)",
+   "+19 Ranged Attack Power",
+   "+5 Arcane Resistance",
+   "Durability 75 / 75",
+   "Requires Level 48",
+   "Dropped by: Tinkerer Gizlock",
+   "Drop Chance: 28.00%"
+  ],
+  "url": "https://www.wowhead.com/forever/item=17717"
+ },
+ "Gorewood Bow": {
+  "type": "item",
+  "id": 16996,
+  "icon": "inv_weapon_bow_04",
+  "quality": 3,
+  "lines": [
+   "Gorewood Bow",
+   "Item Level 62",
+   "Binds when picked up",
+   "Ranged Bow",
+   "55 - 104 Damage",
+   "Speed 2.50",
+   "(31.80 damage per second)",
+   "+2 Strength",
+   "+3 Agility",
+   "+9 Stamina",
+   "Durability 75 / 75"
+  ],
+  "url": "https://www.wowhead.com/forever/item=16996"
+ },
+ "Blackcrow": {
+  "type": "item",
+  "id": 12651,
+  "icon": "inv_weapon_crossbow_04",
+  "quality": 3,
+  "lines": [
+   "Blackcrow",
+   "Item Level 59",
+   "Binds when picked up",
+   "Ranged Crossbow",
+   "77 - 117 Damage",
+   "Speed 3.20",
+   "(30.31 damage per second)",
+   "+3 Agility",
+   "Durability 75 / 75",
+   "Requires Level 54",
+   "Equip: Improves your chance to hit by 0.9%.",
+   "Dropped by: Shadow Hunter Vosh'gajin",
+   "Drop Chance: 13.49%"
+  ],
+  "url": "https://www.wowhead.com/forever/item=12651"
+ },
+ "Carapace Spine Crossbow": {
+  "type": "item",
+  "id": 18738,
+  "icon": "inv_weapon_crossbow_04",
+  "quality": 3,
+  "lines": [
+   "Carapace Spine Crossbow",
+   "Item Level 61",
+   "Binds when picked up",
+   "Ranged Crossbow",
+   "82 - 124 Damage",
+   "Speed 3.30",
+   "(31.21 damage per second)",
+   "+5 Agility",
+   "+9 Stamina",
+   "Durability 75 / 75",
+   "Requires Level 56",
+   "Dropped by: Nerub'enkan",
+   "Drop Chance: 17.96%"
+  ],
+  "url": "https://www.wowhead.com/forever/item=18738"
+ },
+ "Deep Jungle Rifle": {
+  "type": "item",
+  "id": 280020,
+  "icon": "inv_weapon_rifle_04",
+  "quality": 3,
+  "lines": [
+   "Deep Jungle Rifle",
+   "Item Level 63",
+   "Binds when picked up",
+   "Ranged Gun",
+   "70 - 130 Damage",
+   "Speed 3.10",
+   "(32.26 damage per second)",
+   "+5 Stamina",
+   "Durability 75 / 75",
+   "Requires Level 58",
+   "Equip: Improves your chance to hit by 0.5%.",
+   "Equip: +14 Attack Power.",
+   "Dropped by: Thunderhoof",
+   "Drop Chance: 31.07%"
+  ],
+  "url": "https://www.wowhead.com/forever/item=280020"
+ },
+ "Cozy Sleeping Bag": {
+  "type": "item",
+  "id": 211527,
+  "icon": "inv_misc_bag_bigbagofenchantments",
+  "quality": 3,
+  "lines": [
+   "Cozy Sleeping Bag",
+   "Item Level 40",
+   "Binds when picked up",
+   "Unique",
+   "Use: Unfurl a sleeping bag. Resting inside for at least one minute will provide a bonus to experience earned, stacking up to 3 times. (1 Hour Cooldown)",
+   "\"Old, but still good\""
+  ],
+  "url": "https://www.wowhead.com/forever/item=211527"
+ },
+ "Student Fodder": {
+  "type": "item",
+  "id": 216619,
+  "icon": "inv_misc_food_pinenut",
+  "quality": 2,
+  "lines": [
+   "Student Fodder",
+   "Item Level 33",
+   "Binds when picked up",
+   "Use: Eat a handful and make up for lost time on the trail! (5 Min Cooldown)",
+   "\"Good ol' raisins and peanuts...and more!\"",
+   "Max Stack: 30"
+  ],
+  "url": "https://www.wowhead.com/forever/item=216619"
+ },
+ "Swiftness Potion": {
+  "type": "item",
+  "id": 2459,
+  "icon": "inv_potion_95",
+  "quality": 1,
+  "lines": [
+   "Swiftness Potion",
+   "Item Level 15",
+   "Requires Level 5",
+   "Use: Increases run speed by 50% for 15 sec. (2 Min Cooldown)",
+   "Max Stack: 5",
+   "Dropped by: Eric \"The Swift\"",
+   "Drop Chance: 18.30%"
+  ],
+  "url": "https://www.wowhead.com/forever/item=2459"
+ },
+ "Keen Skinning Knife": {
+  "type": "item",
+  "id": 269716,
+  "icon": "inv_weapon_shortblade_05",
+  "quality": 2,
+  "lines": [
+   "Keen Skinning Knife",
+   "Item Level 18",
+   "Binds when picked up",
+   "Main Hand Dagger",
+   "6 - 12 Damage",
+   "Speed 1.50",
+   "(6.00 damage per second)",
+   "+2 Intellect",
+   "Durability 40 / 40",
+   "Equip: Increases damage and healing done by magical spells and effects by up to 10.",
+   "Equip: Increased Skinning +3."
+  ],
+  "url": "https://www.wowhead.com/forever/item=269716"
+ },
+ "Wildhunter Cloak": {
+  "type": "item",
+  "id": 16658,
+  "icon": "inv_misc_cape_10",
+  "quality": 2,
+  "lines": [
+   "Wildhunter Cloak",
+   "Item Level 32",
+   "Binds when picked up",
+   "Back",
+   "22 Armor",
+   "+2 Stamina",
+   "Equip: +10 Attack Power.",
+   "Equip: +9 Attack Power against Beasts."
+  ],
+  "url": "https://www.wowhead.com/forever/item=16658"
+ },
+ "Totemic Clan Ring": {
+  "type": "item",
+  "id": 5313,
+  "icon": "inv_misc_root_02",
+  "quality": 2,
+  "lines": [
+   "Totemic Clan Ring",
+   "Item Level 25",
+   "Binds when picked up",
+   "Finger",
+   "+3 Intellect",
+   "+3 Spirit"
+  ],
+  "url": "https://www.wowhead.com/forever/item=5313"
+ },
+ "Jangdor's Handcrafted Tunic": {
+  "type": "item",
+  "id": 19042,
+  "icon": "inv_chest_leather_08",
+  "quality": 2,
+  "lines": [
+   "Jangdor's Handcrafted Tunic",
+   "Item Level 48",
+   "Binds when picked up",
+   "Chest Leather",
+   "129 Armor",
+   "+6 Strength",
+   "+7 Agility",
+   "+15 Stamina",
+   "Durability 85 / 85"
+  ],
+  "url": "https://www.wowhead.com/forever/item=19042"
+ },
+ "Farmer Dalson's Shotgun": {
+  "type": "item",
+  "id": 13474,
+  "icon": "inv_weapon_rifle_04",
+  "quality": 2,
+  "lines": [
+   "Farmer Dalson's Shotgun",
+   "Item Level 56",
+   "Binds when picked up",
+   "Ranged Gun",
+   "34 - 64 Damage",
+   "Speed 1.90",
+   "(25.79 damage per second)",
+   "+8 Stamina",
+   "Durability 65 / 65"
+  ],
+  "url": "https://www.wowhead.com/forever/item=13474"
+ },
+ "Argent Dawn Commission": {
+  "type": "item",
+  "id": 12846,
+  "icon": "inv_jewelry_talisman_07",
+  "quality": 1,
+  "lines": [
+   "Argent Dawn Commission",
+   "Item Level 1",
+   "Binds when picked up",
+   "Unique",
+   "Trinket",
+   "\"Equipping this badge is an indication of service to the Argent Dawn.\""
+  ],
+  "url": "https://www.wowhead.com/forever/item=12846"
+ },
+ "Sniper Scope": {
+  "type": "item",
+  "id": 10548,
+  "icon": "inv_misc_spyglass_02",
+  "quality": 1,
+  "lines": [
+   "Sniper Scope",
+   "Item Level 48",
+   "Requires Level 40",
+   "Use: Attaches a permanent scope to a bow or gun that increases its damage by 7.",
+   "Max Stack: 5"
+  ],
+  "url": "https://www.wowhead.com/forever/item=10548"
+ },
+ "Expert Cookbook": {
+  "type": "item",
+  "id": 16072,
+  "icon": "inv_misc_book_08",
+  "quality": 1,
+  "lines": [
+   "Expert Cookbook",
+   "Item Level 30",
+   "Requires Cooking (125)",
+   "Use: Teaches you how to be an Expert Cook, allowing a maximum of 225 cooking skill."
+  ],
+  "url": "https://www.wowhead.com/forever/item=16072"
+ },
+ "Flint and Tinder": {
+  "type": "item",
+  "id": 4471,
+  "icon": "inv_stone_11",
+  "quality": 1,
+  "lines": [
+   "Flint and Tinder",
+   "Item Level 5"
+  ],
+  "url": "https://www.wowhead.com/forever/item=4471"
+ },
+ "Simple Wood": {
+  "type": "item",
+  "id": 4470,
+  "icon": "inv_tradeskillitem_01",
+  "quality": 1,
+  "lines": [
+   "Simple Wood",
+   "Item Level 5",
+   "Crafting Reagent",
+   "Max Stack: 20"
+  ],
+  "url": "https://www.wowhead.com/forever/item=4470"
+ },
+ "Undermine Satchel": {
+  "type": "item",
+  "id": 271994,
+  "icon": "inv_misc_bag_31",
+  "quality": 1,
+  "lines": [
+   "Undermine Satchel",
+   "Item Level 1",
+   "Binds when picked up",
+   "\"Jingles loudly from the sound of gold and useful goods inside.\"",
+   "<Right Click to Open>"
+  ],
+  "url": "https://www.wowhead.com/forever/item=271994"
+ },
+ "Elixir of the Mongoose": {
+  "type": "item",
+  "id": 13452,
+  "icon": "inv_potion_32",
+  "quality": 1,
+  "lines": [
+   "Elixir of the Mongoose",
+   "Item Level 56",
+   "Requires Level 46",
+   "Use: Increases Agility by 25 and chance to get a critical hit by 2%. Lasts for 30 min. (3 Sec Cooldown)",
+   "Max Stack: 20",
+   "Dropped by: Commander Eligor Dawnbringer"
+  ],
+  "url": "https://www.wowhead.com/forever/item=13452"
+ },
+ "Grilled Squid": {
+  "type": "item",
+  "id": 13928,
+  "icon": "inv_misc_fish_13",
+  "quality": 1,
+  "lines": [
+   "Grilled Squid",
+   "Item Level 45",
+   "Requires Level 35",
+   "Use: Restores 2065 health over 30 sec. Must remain seated while eating. If you spend at least 10 sec eating, you will become well fed and gain 1% Critical Strike chance for 15 min. Additionally, experience gained from kills is increased by 5%.",
+   "Max Stack: 20"
+  ],
+  "url": "https://www.wowhead.com/forever/item=13928"
+ },
+ "Thick Leather": {
+  "type": "item",
+  "id": 4304,
+  "icon": "inv_misc_leatherscrap_08",
+  "quality": 1,
+  "lines": [
+   "Thick Leather",
+   "Item Level 40",
+   "Crafting Reagent",
+   "Max Stack: 20"
+  ],
+  "url": "https://www.wowhead.com/forever/item=4304"
+ },
+ "Minion's Scourgestone": {
+  "type": "item",
+  "id": 12840,
+  "icon": "inv_jewelry_talisman_14",
+  "quality": 1,
+  "lines": [
+   "Minion's Scourgestone",
+   "Item Level 1",
+   "Binds when picked up",
+   "Max Stack: 250"
+  ],
+  "url": "https://www.wowhead.com/forever/item=12840"
+ },
+ "Auto Shot": {
+  "type": "spell",
+  "id": 75,
+  "icon": "ability_whirlwind",
+  "quality": -1,
+  "lines": [
+   "Auto Shot",
+   "8 - 35 yd range",
+   "InstantRequires Hunter",
+   "Requires level 1",
+   "Requires Ranged WeaponAutomatically shoots the target until cancelled."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=75"
+ },
+ "Raptor Strike": {
+  "type": "spell",
+  "id": 14266,
+  "icon": "ability_meleedamage",
+  "quality": -1,
+  "lines": [
+   "Raptor Strike",
+   "100 Mana Melee Range",
+   "Next Melee 6 sec cooldown",
+   "Requires Hunter",
+   "Requires level 56",
+   "Requires Melee WeaponA strong attack that deals melee weapon damage plus 70."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=14266"
+ },
+ "Track Beasts": {
+  "type": "spell",
+  "id": 1494,
+  "icon": "ability_tracking",
+  "quality": -1,
+  "lines": [
+   "Track Beasts",
+   "InstantRequires Hunter",
+   "Requires level 1",
+   "Shows the location of all nearby beasts on the minimap. Only one form of tracking can be active at a time."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=1494"
+ },
+ "Serpent Sting": {
+  "type": "spell",
+  "id": 25295,
+  "icon": "ability_hunter_quickshot",
+  "quality": -1,
+  "lines": [
+   "Serpent Sting",
+   "250 Mana 8 - 35 yd range",
+   "Requires Hunter",
+   "Requires level 60",
+   "Requires Ranged WeaponStings the target, causing 675 Nature damage over 15 sec. Only one Sting per Hunter can be active on any one target."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=25295"
+ },
+ "Aspect of the Monkey": {
+  "type": "spell",
+  "id": 13163,
+  "icon": "ability_hunter_aspectofthemonkey",
+  "quality": -1,
+  "lines": [
+   "Aspect of the Monkey",
+   "20 Mana 100 yd range",
+   "InstantRequires Hunter",
+   "Requires level 4",
+   "The hunter takes on the aspects of a monkey, increasing chance to dodge by 8%. Only one Aspect can be active at a time."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=13163"
+ },
+ "Arcane Shot": {
+  "type": "spell",
+  "id": 14287,
+  "icon": "ability_impalingbolt",
+  "quality": -1,
+  "lines": [
+   "Arcane Shot",
+   "11% of base mana 8 - 35 yd range",
+   "6 sec cooldownRequires Hunter",
+   "Requires level 60",
+   "Requires Ranged WeaponAn instant shot that causes 280 Arcane damage."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=14287"
+ },
+ "Hunter's Mark": {
+  "type": "spell",
+  "id": 14324,
+  "icon": "ability_hunter_snipershot",
+  "quality": -1,
+  "lines": [
+   "Hunter's Mark",
+   "45 Mana 100 yd range",
+   "InstantRequires Hunter",
+   "Requires level 40",
+   "Places the Hunter's Mark on the target, increasing the Ranged Attack Power of all attackers against that target by 98. In addition, the target of this ability can always be seen by the hunter whether it stealths or turns invisible. The target also appears on the mini-map. Lasts for 2 min."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=14324"
+ },
+ "Concussive Shot": {
+  "type": "spell",
+  "id": 5116,
+  "icon": "spell_frost_stun",
+  "quality": -1,
+  "lines": [
+   "Concussive Shot",
+   "8% of base mana 8 - 35 yd range",
+   "12 sec cooldownRequires Hunter",
+   "Requires level 8",
+   "Requires Ranged WeaponDazes the target, slowing movement speed by 50% for 4 sec."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=5116"
+ },
+ "Aspect of the Hawk": {
+  "type": "spell",
+  "id": 25296,
+  "icon": "spell_nature_ravenform",
+  "quality": -1,
+  "lines": [
+   "Aspect of the Hawk",
+   "120 Mana",
+   "InstantRequires Hunter",
+   "Requires level 60",
+   "The hunter takes on the aspects of a hawk, increasing Ranged Attack Power by 120. Only one Aspect can be active at a time."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=25296"
+ },
+ "Call Pet": {
+  "type": "spell",
+  "id": 883,
+  "icon": "ability_hunter_beastcall",
+  "quality": -1,
+  "lines": [
+   "Call Pet",
+   "InstantRequires Hunter",
+   "Requires level 10",
+   "Summons your pet to you."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=883"
+ },
+ "Dismiss Pet": {
+  "type": "spell",
+  "id": 2641,
+  "icon": "spell_nature_spiritwolf",
+  "quality": -1,
+  "lines": [
+   "Dismiss Pet",
+   "10 yd range",
+   "5 sec castRequires Hunter",
+   "Requires level 10",
+   "Dismiss your pet. Dismissing your pet will reduce its happiness by 50."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=2641"
+ },
+ "Feed Pet": {
+  "type": "spell",
+  "id": 6991,
+  "icon": "ability_hunter_beasttraining",
+  "quality": -1,
+  "lines": [
+   "Feed Pet",
+   "10 yd range",
+   "InstantRequires Hunter",
+   "Requires level 10",
+   "Feed your pet the selected item. Feeding your pet increases happiness. Using food close to the pet's level will have a better result."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=6991"
+ },
+ "Revive Pet": {
+  "type": "spell",
+  "id": 982,
+  "icon": "ability_hunter_beastsoothe",
+  "quality": -1,
+  "lines": [
+   "Revive Pet",
+   "100% of base mana",
+   "10 sec castRequires Hunter",
+   "Requires level 10",
+   "Revive your pet, returning it to life with 15% of its health."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=982"
+ },
+ "Tame Beast": {
+  "type": "spell",
+  "id": 1515,
+  "icon": "ability_hunter_beasttaming",
+  "quality": -1,
+  "lines": [
+   "Tame Beast",
+   "60% of base mana 30 yd range",
+   "Channeled (20 sec cast)Requires Hunter",
+   "Requires level 10",
+   "Begins taming a beast to be your companion. Your armor is reduced by 100% while you focus on taming the beast for 20 sec. If you lose the beast's attention for any reason, the taming process will fail. Once tamed, the beast will be very unhappy and disloyal. Try feeding the pet immediately to make it happy."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=1515"
+ },
+ "Beast Training": {
+  "type": "spell",
+  "id": 5149,
+  "icon": "ability_hunter_beastcall02",
+  "quality": -1,
+  "lines": [
+   "Beast Training",
+   "InstantRequires Hunter",
+   "Requires level 10",
+   "Lets you train your pet with various abilities that you have learned how to teach."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=5149"
+ },
+ "Track Humanoids": {
+  "type": "spell",
+  "id": 5225,
+  "icon": "ability_tracking",
+  "quality": -1,
+  "lines": [
+   "Track Humanoids",
+   "InstantRequires Druid",
+   "Requires level 32",
+   "Requires Cat FormShows the location of all nearby humanoids on the minimap. Only one type of thing can be tracked at a time."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=5225"
+ },
+ "Mend Pet": {
+  "type": "spell",
+  "id": 136,
+  "icon": "ability_hunter_mendpet",
+  "quality": -1,
+  "lines": [
+   "Mend Pet",
+   "50 Mana 20 yd range",
+   "Channeled (5 sec cast)Requires Hunter",
+   "Requires level 12",
+   "Heals your pet 20 health every second while you focus. Lasts 5 sec."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=136"
+ },
+ "Wing Clip": {
+  "type": "spell",
+  "id": 2974,
+  "icon": "ability_rogue_trip",
+  "quality": -1,
+  "lines": [
+   "Wing Clip",
+   "40 Mana Melee Range",
+   "InstantRequires Hunter",
+   "Requires level 12",
+   "Requires Melee WeaponInflicts 5 damage and reduces the enemy target's movement speed by 50% for 10 sec."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=2974"
+ },
+ "Distracting Shot": {
+  "type": "spell",
+  "id": 20736,
+  "icon": "spell_arcane_blink",
+  "quality": -1,
+  "lines": [
+   "Distracting Shot",
+   "20 Mana 8 - 35 yd range",
+   "8 sec cooldownRequires Hunter",
+   "Requires level 12",
+   "Requires Ranged WeaponDistract the target, causing threat."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=20736"
+ },
+ "Eagle Eye": {
+  "type": "spell",
+  "id": 6197,
+  "icon": "ability_hunter_eagleeye",
+  "quality": -1,
+  "lines": [
+   "Eagle Eye",
+   "25 Mana Unlimited range",
+   "Channeled (1 min cast)Requires Hunter",
+   "Requires level 14",
+   "Zooms in the hunter's vision. Only usable outdoors. Lasts 1 min."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=6197"
+ },
+ "Eyes of the Beast": {
+  "type": "spell",
+  "id": 1002,
+  "icon": "ability_eyeoftheowl",
+  "quality": -1,
+  "lines": [
+   "Eyes of the Beast",
+   "20 Mana Unlimited range",
+   "2 sec castRequires Hunter",
+   "Requires level 14",
+   "Take direct control of your pet and see through its eyes for 2 min."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=1002"
+ },
+ "Scare Beast": {
+  "type": "spell",
+  "id": 14327,
+  "icon": "ability_druid_cower",
+  "quality": -1,
+  "lines": [
+   "Scare Beast",
+   "75 Mana 10 yd range",
+   "1.5 sec cast 30 sec cooldown",
+   "Requires Hunter",
+   "Requires level 46",
+   "Scares a beast, causing it to run in fear for up to 20 sec. Damage caused may interrupt the effect. Only one beast can be feared at a time."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=14327"
+ },
+ "Immolation Trap": {
+  "type": "spell",
+  "id": 14305,
+  "icon": "spell_fire_flameshock",
+  "quality": -1,
+  "lines": [
+   "Immolation Trap",
+   "245 Mana",
+   "Instant 30 sec cooldown",
+   "Requires Hunter",
+   "Requires level 56",
+   "Place a Fire trap that will burn the first enemy to approach for 690 Fire damage over 15 sec. Trap will exist for 1 min. Only one Fire trap can be active at a time."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=14305"
+ },
+ "Mongoose Bite": {
+  "type": "spell",
+  "id": 14271,
+  "icon": "ability_hunter_swiftstrike",
+  "quality": -1,
+  "lines": [
+   "Mongoose Bite",
+   "65 Mana Melee Range",
+   "Instant 5 sec cooldown",
+   "Requires Hunter",
+   "Requires level 58",
+   "Counterattack the enemy for melee weapon damage plus 57. Can only be performed after you dodge."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=14271"
+ },
+ "Multi-Shot": {
+  "type": "spell",
+  "id": 2643,
+  "icon": "ability_upgrademoonglaive",
+  "quality": -1,
+  "lines": [
+   "Multi-Shot",
+   "13.9% of base mana 8 - 35 yd range",
+   "Instant 6 sec cooldown",
+   "Requires Hunter",
+   "Requires level 18",
+   "Requires Ranged WeaponFires several missiles, hitting 3 targets. Multi-Shot shares its cooldown with Aimed Shot."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=2643"
+ },
+ "Track Undead": {
+  "type": "spell",
+  "id": 19884,
+  "icon": "spell_shadow_darksummoning",
+  "quality": -1,
+  "lines": [
+   "Track Undead",
+   "InstantRequires Hunter",
+   "Requires level 18",
+   "Shows the location of all nearby undead on the minimap. Only one form of tracking can be active at a time."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=19884"
+ },
+ "Aimed Shot": {
+  "type": "spell",
+  "id": 19434,
+  "icon": "inv_spear_07",
+  "quality": -1,
+  "lines": [
+   "Aimed Shot",
+   "75 Mana 8 - 35 yd range",
+   "2 sec cast 6 sec cooldown",
+   "Requires Hunter",
+   "Requires level 20",
+   "Requires Ranged WeaponAn aimed shot that increases ranged damage by 40. Aimed Shot shares its cooldown with Multi-Shot."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=19434"
+ },
+ "Aspect of the Cheetah": {
+  "type": "spell",
+  "id": 5118,
+  "icon": "ability_mount_jungletiger",
+  "quality": -1,
+  "lines": [
+   "Aspect of the Cheetah",
+   "40 Mana",
+   "InstantRequires Hunter",
+   "Requires level 20",
+   "The hunter takes on the aspects of a cheetah, increasing movement speed by 30%. If the hunter takes damage, he will be dazed for 4 sec. Only one Aspect can be active at a time."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=5118"
+ },
+ "Freezing Trap": {
+  "type": "spell",
+  "id": 27753,
+  "icon": "spell_frost_chainsofice",
+  "quality": -1,
+  "lines": [
+   "Freezing Trap",
+   "100 Mana",
+   "Instant 15 sec cooldown",
+   "Requires Hunter",
+   "Requires level 60",
+   "Place a frost trap that freezes the first enemy that approaches, preventing all action for up to 20 sec. Any damage caused will break the ice. Trap will exist for 1 min. Traps can only be placed when out of combat. Only one trap can be active at a time."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=27753"
+ },
+ "Disengage": {
+  "type": "spell",
+  "id": 14273,
+  "icon": "ability_rogue_feint",
+  "quality": -1,
+  "lines": [
+   "Disengage",
+   "150 Mana Melee Range",
+   "Instant 5 sec cooldown",
+   "Requires Hunter",
+   "Requires level 48",
+   "Requires Melee WeaponAttempts to disengage from the target by reducing threat. More effective than Disengage (Rank 2). Disables auto-attack."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=14273"
+ },
+ "Scorpid Sting": {
+  "type": "spell",
+  "id": 3043,
+  "icon": "ability_hunter_criticalshot",
+  "quality": -1,
+  "lines": [
+   "Scorpid Sting",
+   "9% of base mana 8 - 35 yd range",
+   "Requires Hunter",
+   "Requires level 22",
+   "Requires Ranged WeaponStings the target, reducing the target's chance to hit with attacks by 2% for 20 sec. Only one Sting per Hunter can be active on any one target."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=3043"
+ },
+ "Track Hidden": {
+  "type": "spell",
+  "id": 19885,
+  "icon": "ability_stealth",
+  "quality": -1,
+  "lines": [
+   "Track Hidden",
+   "InstantRequires Hunter",
+   "Requires level 24",
+   "Increases stealth detection and shows hidden units within detection range on the minimap. Only one form of tracking can be active at a time."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=19885"
+ },
+ "Beast Lore": {
+  "type": "spell",
+  "id": 1462,
+  "icon": "ability_physical_taunt",
+  "quality": -1,
+  "lines": [
+   "Beast Lore",
+   "40 Mana 40 yd range",
+   "InstantRequires Hunter",
+   "Requires level 24",
+   "Gather information about the target beast. The tooltip will display damage, health, armor, any special resistances, and diet."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=1462"
+ },
+ "Rapid Fire": {
+  "type": "spell",
+  "id": 3045,
+  "icon": "ability_hunter_runningshot",
+  "quality": -1,
+  "lines": [
+   "Rapid Fire",
+   "100 Mana",
+   "Instant 5 min cooldown",
+   "Requires Hunter",
+   "Requires level 26",
+   "Increases ranged and melee attack speed by 40% for 15 sec."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=3045"
+ },
+ "Track Elementals": {
+  "type": "spell",
+  "id": 19880,
+  "icon": "spell_frost_summonwaterelemental",
+  "quality": -1,
+  "lines": [
+   "Track Elementals",
+   "InstantRequires Hunter",
+   "Requires level 26",
+   "Shows the location of all nearby elementals on the minimap. Only one form of tracking can be active at a time."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=19880"
+ },
+ "Frost Trap": {
+  "type": "spell",
+  "id": 13809,
+  "icon": "spell_frost_freezingbreath",
+  "quality": -1,
+  "lines": [
+   "Frost Trap",
+   "60 Mana",
+   "Instant 30 sec cooldown",
+   "Requires Hunter",
+   "Requires level 28",
+   "Place a Frost trap that creates an ice slick around itself for 30 sec when the first enemy approaches it. All enemies within 10 yards will be slowed by 60% while in the area of effect. Trap will exist for 1 min. Only one Frost trap can be active at a time."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=13809"
+ },
+ "Feign Death": {
+  "type": "spell",
+  "id": 5384,
+  "icon": "ability_rogue_feigndeath",
+  "quality": -1,
+  "lines": [
+   "Feign Death",
+   "80 Mana",
+   "Instant 30 sec cooldown",
+   "Requires Hunter",
+   "Requires level 30",
+   "Feign death which may trick enemies into ignoring you. Lasts 6 min. If not cancelled, after 6 min you will actually die."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=5384"
+ },
+ "Aspect of the Beast": {
+  "type": "spell",
+  "id": 13161,
+  "icon": "ability_mount_pinktiger",
+  "quality": -1,
+  "lines": [
+   "Aspect of the Beast",
+   "50 Mana",
+   "InstantRequires Hunter",
+   "Requires level 30",
+   "The hunter takes on the aspects of a beast, becoming untrackable and increasing Melee Attack Power by 50. Only one Aspect can be active at a time."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=13161"
+ },
+ "Flare": {
+  "type": "spell",
+  "id": 1543,
+  "icon": "spell_fire_flare",
+  "quality": -1,
+  "lines": [
+   "Flare",
+   "50 Mana 30 yd range",
+   "Instant 15 sec cooldown",
+   "Requires Hunter",
+   "Requires level 32",
+   "Exposes all hidden and invisible enemies within 10 yards of the targeted area for 30 sec."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=1543"
+ },
+ "Track Demons": {
+  "type": "spell",
+  "id": 19878,
+  "icon": "spell_shadow_summonfelhunter",
+  "quality": -1,
+  "lines": [
+   "Track Demons",
+   "InstantRequires Hunter",
+   "Requires level 32",
+   "Shows the location of all nearby demons on the minimap. Only one form of tracking can be active at a time."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=19878"
+ },
+ "Explosive Trap": {
+  "type": "spell",
+  "id": 14317,
+  "icon": "spell_fire_selfdestruct",
+  "quality": -1,
+  "lines": [
+   "Explosive Trap",
+   "Level 60",
+   "520 Mana",
+   "Instant 30 sec cooldown",
+   "Requires Hunter",
+   "Requires level 54",
+   "Place a Fire trap that explodes when an enemy approaches, causing 208 to 264 Fire damage and 330 additional Fire damage over 20 sec to all within 10 yards. Trap will exist for 1 min. Only one Fire trap can be active at a time."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=14317"
+ },
+ "Viper Sting": {
+  "type": "spell",
+  "id": 14280,
+  "icon": "ability_hunter_aimedshot",
+  "quality": -1,
+  "lines": [
+   "Viper Sting",
+   "215 Mana 8 - 35 yd range",
+   "15 sec cooldownRequires Hunter",
+   "Requires level 56",
+   "Requires Ranged WeaponStings the target, draining 1108 mana over 8 sec. Only one Sting per Hunter can be active on any one target."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=14280"
+ },
+ "Aspect of the Pack": {
+  "type": "spell",
+  "id": 13159,
+  "icon": "ability_mount_whitetiger",
+  "quality": -1,
+  "lines": [
+   "Aspect of the Pack",
+   "100 Mana",
+   "InstantRequires Hunter",
+   "Requires level 40",
+   "The hunter and group members within 30 yards take on the aspects of a pack of cheetahs, increasing movement speed by 30%. If a pack member takes damage, they will be dazed for 4 sec. Only one Aspect can be active at a time."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=13159"
+ },
+ "Volley": {
+  "type": "spell",
+  "id": 1510,
+  "icon": "ability_marksmanship",
+  "quality": -1,
+  "lines": [
+   "Volley",
+   "350 Mana 35 yd range",
+   "Channeled (6 sec cast)Requires Hunter",
+   "Requires level 40",
+   "Requires Ranged WeaponContinuously fires a volley of ammo at the target area, causing 70 Arcane damage to enemy targets within 8 yards every 1 sec for 6 sec."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=1510"
+ },
+ "Track Giants": {
+  "type": "spell",
+  "id": 19882,
+  "icon": "ability_racial_avatar",
+  "quality": -1,
+  "lines": [
+   "Track Giants",
+   "InstantRequires Hunter",
+   "Requires level 40",
+   "Shows the location of all nearby giants on the minimap. Only one form of tracking can be active at a time."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=19882"
+ },
+ "Aspect of the Wild": {
+  "type": "spell",
+  "id": 20190,
+  "icon": "spell_nature_protectionformnature",
+  "quality": -1,
+  "lines": [
+   "Aspect of the Wild",
+   "115 Mana",
+   "InstantRequires Hunter",
+   "Requires level 56",
+   "The hunter and all party and raid members within 30 yards take on the aspect of the wild, increasing Nature resistance by 60. Only one Aspect can be active at a time."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=20190"
+ },
+ "Track Dragonkin": {
+  "type": "spell",
+  "id": 19879,
+  "icon": "inv_misc_head_dragon_01",
+  "quality": -1,
+  "lines": [
+   "Track Dragonkin",
+   "InstantRequires Hunter",
+   "Requires level 50",
+   "Shows the location of all nearby dragonkin on the minimap. Only one form of tracking can be active at a time."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=19879"
+ },
+ "Tranquilizing Shot": {
+  "type": "spell",
+  "id": 19801,
+  "icon": "spell_nature_drowsy",
+  "quality": -1,
+  "lines": [
+   "Tranquilizing Shot",
+   "270 Mana 8 - 35 yd range",
+   "20 sec cooldownRequires Hunter",
+   "Requires level 60",
+   "Requires Ranged WeaponAttempts to remove 1 Frenzy effect from an enemy creature."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=19801"
+ },
+ "Berserking": {
+  "type": "spell",
+  "id": 20554,
+  "icon": "racial_troll_berserk",
+  "quality": -1,
+  "lines": [
+   "Berserking",
+   "Instant 3 min cooldown",
+   "Requires level 1",
+   "Increases your spellcasting and attack speed by 10% for 15 sec."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=20554"
+ },
+ "Rapid Regeneration": {
+  "type": "spell",
+  "id": 1260270,
+  "icon": "ability_racial_regeneratin",
+  "quality": -1,
+  "lines": [
+   "Rapid Regeneration",
+   "Channeled (6 sec cast) 3 min cooldown",
+   "Regenerate 50% of your maximum Health over 6 sec. Any movement, action, or damage taken will cancel the effect."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=1260270"
+ },
+ "Beast Slaying": {
+  "type": "spell",
+  "id": 20557,
+  "icon": "inv_misc_pelt_bear_ruin_02",
+  "quality": -1,
+  "lines": [
+   "Beast Slaying",
+   "Damage dealt versus Beasts increased by 5%."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=20557"
+ },
+ "Claw": {
+  "type": "spell",
+  "id": 16829,
+  "icon": "ability_druid_rake",
+  "quality": -1,
+  "lines": [
+   "Claw",
+   "25 Focus Melee Range",
+   "InstantRequires Hunter",
+   "Requires level 16",
+   "Claw the enemy, causing 12 to 16 damage."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=16829"
+ },
+ "Bite": {
+  "type": "spell",
+  "id": 17257,
+  "icon": "ability_racial_cannibalize",
+  "quality": -1,
+  "lines": [
+   "Bite",
+   "35 Focus Melee Range",
+   "Instant 10 sec cooldown",
+   "Requires Hunter",
+   "Requires level 24",
+   "Bite the enemy, causing 31 to 37 damage."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=17257"
+ },
+ "Dash": {
+  "type": "spell",
+  "id": 23099,
+  "icon": "ability_druid_dash",
+  "quality": -1,
+  "lines": [
+   "Dash",
+   "20 Focus",
+   "Instant 30 sec cooldown",
+   "Requires Hunter",
+   "Requires level 30",
+   "Increases movement speed by 40% for 15 sec."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=23099"
+ },
+ "Dive": {
+  "type": "spell",
+  "id": 23145,
+  "icon": "spell_shadow_burningspirit",
+  "quality": -1,
+  "lines": [
+   "Dive",
+   "20 Focus",
+   "Instant 30 sec cooldown",
+   "Requires Hunter",
+   "Requires level 30",
+   "Increases movement speed by 40% for 15 sec."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=23145"
+ },
+ "Growl": {
+  "type": "spell",
+  "id": 2649,
+  "icon": "ability_physical_taunt",
+  "quality": -1,
+  "lines": [
+   "Growl",
+   "15 Focus Melee Range",
+   "Instant 5 sec cooldown",
+   "Requires Hunter",
+   "Requires level 1",
+   "Taunt the target, increasing the likelihood the creature will focus attacks on you."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=2649"
+ },
+ "Furious Howl": {
+  "type": "spell",
+  "id": 24597,
+  "icon": "ability_hunter_pet_wolf",
+  "quality": -1,
+  "lines": [
+   "Furious Howl",
+   "Level 60",
+   "Rank 4",
+   "60 Focus 30 yd range",
+   "Instant 30 sec cooldown",
+   "Requires Hunter",
+   "Requires level 56",
+   "The wolf howls, increasing the melee attack power of all party or raid members within 15 yards by 84. Lasts 1 min."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=24597"
+ },
+ "Great Stamina": {
+  "type": "spell",
+  "id": 5042,
+  "icon": "spell_nature_unyeildingstamina",
+  "quality": -1,
+  "lines": [
+   "Great Stamina",
+   "Requires Hunter",
+   "Requires level 60",
+   "Health increased by 400."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=5042"
+ },
+ "Natural Armor": {
+  "type": "spell",
+  "id": 24630,
+  "icon": "spell_nature_spiritarmor",
+  "quality": -1,
+  "lines": [
+   "Natural Armor",
+   "Requires Hunter",
+   "Requires level 60",
+   "Armor increased by 1000."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=24630"
+ },
+ "Scramble": {
+  "type": "quest",
+  "id": 79980,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Scramble",
+   "Find what awaits you."
+  ],
+  "url": "https://www.wowhead.com/forever/quest=79980"
+ },
+ "Welcome to the Jungle": {
+  "type": "quest",
+  "id": 583,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Welcome to the Jungle",
+   "Speak with Hemet Nesingwary."
+  ],
+  "url": "https://www.wowhead.com/forever/quest=583"
+ },
+ "Big Game Hunter": {
+  "type": "quest",
+  "id": 208,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Big Game Hunter",
+   "Level 43",
+   "Hemet Nesingwary wants you to bring him the head of King Bangalash, the great white tiger.",
+   "Requirements:",
+   "- Head of Bangalash"
+  ],
+  "url": "https://www.wowhead.com/forever/quest=208"
+ },
+ "Corruption of Earth and Seed": {
+  "type": "quest",
+  "id": 7065,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Corruption of Earth and Seed",
+   "Level 51",
+   "Slay Princess Theradras and return to Keeper Marandis at Nijel's Point in Desolace.",
+   "Requirements:",
+   "- Princess Theradras"
+  ],
+  "url": "https://www.wowhead.com/forever/quest=7065"
+ },
+ "Gizelton Caravan": {
+  "type": "quest",
+  "id": 5943,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Gizelton Caravan",
+   "Escort the Gizelton Caravan through Mannoroc Coven. Talk with Smeed at Scrabblescrew's Camp for your reward.",
+   "Requirements:",
+   "- Escort Gizelton Caravan past Mannoroc Coven"
+  ],
+  "url": "https://www.wowhead.com/forever/quest=5943"
+ },
+ "Questioning Reethe": {
+  "type": "quest",
+  "id": 1273,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Questioning Reethe",
+   "Go with Ogron to speak with Reethe, then return to Krog in Brackenwall Village.",
+   "Requirements:",
+   "- Question Reethe with Ogron"
+  ],
+  "url": "https://www.wowhead.com/forever/quest=1273"
+ },
+ "Unwelcome Guests": {
+  "type": "quest",
+  "id": 95508,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Unwelcome Guests",
+   "Help Walton survive the encounter with Terry Longdrink and the Kul Tiras marines.",
+   "Requirements:",
+   "- Assist Walton"
+  ],
+  "url": "https://www.wowhead.com/forever/quest=95508"
+ },
+ "Triage": {
+  "type": "quest",
+  "id": 6624,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Triage",
+   "Save patients by using Triage Bandages to tend to their wounds. You must save 15 patients before 6 of them die from their injuries.",
+   "Remember the order of triage! Critically Injured Soldiers die the fastest followed by Badly Injured Soldiers. Injured Soldiers take the longest to die and should be saved AFTER your Critically Injured and Badly Injured Soldiers have been triaged.",
+   "Requirements:",
+   "- 15 Patients Saved!"
+  ],
+  "url": "https://www.wowhead.com/forever/quest=6624"
+ },
+ "Clamlette Surprise": {
+  "type": "quest",
+  "id": 6610,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Clamlette Surprise",
+   "Dirge Quikcleave wants you to get the following items:",
+   "12 Giant Eggs. You will find those on the Rocs wandering Tanaris or any other species of large bird.",
+   "10 pieces of Zesty Clam Meat. You can find those in clams, naturally!",
+   "20 pieces of Alterac Swiss. Get thee to a cheesery!",
+   "Gather all of the items and return to Dirge.",
+   "Requirements:",
+   "- Giant Egg x 12",
+   "- Zesty Clam Meat x 10",
+   "- Alterac Swiss x 20"
+  ],
+  "url": "https://www.wowhead.com/forever/quest=6610"
+ },
+ "Skinning": {
+  "type": "spell",
+  "id": 10768,
+  "icon": "inv_misc_pelt_wolf_01",
+  "quality": -1,
+  "lines": [
+   "Skinning",
+   "Rank 4",
+   "5 yd range",
+   "3 sec cast",
+   "Tools:",
+   "Skinning Knife",
+   "Artisan skill in skinning the hides from beasts for use in Leatherworking. Gives a potential skinning skill of 300. Requires a Skinning Knife."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=10768"
+ },
+ "Leatherworking": {
+  "type": "spell",
+  "id": 3811,
+  "icon": "inv_misc_armorkit_17",
+  "quality": -1,
+  "lines": [
+   "Leatherworking",
+   "Rank 3",
+   "Instant",
+   "Allows a leatherworker to make high quality leather armors, up to a maximum potential skill of 225."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=3811"
+ },
+ "Cooking": {
+  "type": "spell",
+  "id": 18260,
+  "icon": "inv_misc_food_15",
+  "quality": -1,
+  "lines": [
+   "Cooking",
+   "Rank 4",
+   "Instant",
+   "Allows a cook to make amazing recipes up to a maximum potential skill of 300."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=18260"
+ },
+ "First Aid": {
+  "type": "spell",
+  "id": 7924,
+  "icon": "spell_holy_sealofsacrifice",
+  "quality": -1,
+  "lines": [
+   "First Aid",
+   "Rank 3",
+   "Instant",
+   "Allows a physician to make and use bandages up to a potential skill of 225. The cloth used to make those bandages are found on humanoids in the world."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=7924"
+ },
+ "Fishing": {
+  "type": "spell",
+  "id": 7732,
+  "icon": "trade_fishing",
+  "quality": -1,
+  "lines": [
+   "Fishing",
+   "Rank 3",
+   "10 - 20 yd range",
+   "Channeled (30 sec cast)",
+   "Requires level 1",
+   "Equip a fishing pole and find a body of water to fish. Right-Click on the bob in the water when it splashes to catch your fish. Higher skill increases your chance of fishing successfully in higher level areas."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=7732"
+ },
+ "Engineering": {
+  "type": "spell",
+  "id": 12656,
+  "icon": "trade_engineering",
+  "quality": -1,
+  "lines": [
+   "Engineering",
+   "Rank 4",
+   "Instant",
+   "Allows an engineer to make bombs and gizmos that are truly amazing up to a maximum potential skill of 300."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=12656"
+ },
+ "Mining": {
+  "type": "spell",
+  "id": 10248,
+  "icon": "trade_mining",
+  "quality": -1,
+  "lines": [
+   "Mining",
+   "Rank 2",
+   "5 yd range",
+   "3.2 sec cast",
+   "Tools:",
+   "Mining Pick",
+   "Raising mining to an art form. Gives a potential mining skill of 300."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=10248"
+ },
+ "Basic Campfire": {
+  "type": "spell",
+  "id": 1229737,
+  "icon": "inv_camelot_camping_welcomingcampfire",
+  "quality": 1,
+  "lines": [
+   "Basic Campfire",
+   "10 sec cast",
+   "Tools:",
+   "Flint and Tinder",
+   "Reagents:",
+   "Simple Wood",
+   "Craft a Basic Campfire.",
+   "Basic Campfire Kit (0)",
+   "Item Level 4",
+   "Requires Cooking (1)",
+   "Use: Builds a basic campfire that allows cooking and the placement of up to 3 additional camp features. Players sitting or crafting nearby for 1 min will gain benefits from other camp features. (5 Min Cooldown)",
+   "Max Stack: 20"
+  ],
+  "url": "https://www.wowhead.com/forever/spell=1229737"
+ },
+ "Camp Tent": {
+  "type": "item",
+  "id": 279978,
+  "icon": "inv_misc_leatherscrap_01",
+  "quality": 1,
+  "lines": [
+   "Camp Tent",
+   "Item Level 4",
+   "Requires Leatherworking (20)",
+   "Use: Builds a tent that allows you and others sitting nearby to increase Rested experience to 5% of a level. No effect if Rested experience already exceeds that value.",
+   "Requires a Campfire nearby. All camping features share a cooldown of 1 hour. (1 Hour Cooldown)",
+   "Max Stack: 20"
+  ],
+  "url": "https://www.wowhead.com/forever/item=279978"
+ },
+ "Camp Chair": {
+  "type": "item",
+  "id": 279979,
+  "icon": "inv_crate_01",
+  "quality": 1,
+  "lines": [
+   "Camp Chair",
+   "Item Level 4",
+   "Requires Skinning (20)",
+   "Use: Assembles a camp chair that allows you and others sitting nearby to gain 2% increased critical strike chance with all spells and attacks, mutually exclusive with Moonkin Aura.",
+   "Requires a Campfire nearby. All camping features share a cooldown of 1 hour. (1 Hour Cooldown)",
+   "Max Stack: 20"
+  ],
+  "url": "https://www.wowhead.com/forever/item=279979"
+ },
+ "First Aid Kit": {
+  "type": "item",
+  "id": 279968,
+  "icon": "inv_misc_bandage_11",
+  "quality": 1,
+  "lines": [
+   "First Aid Kit",
+   "Item Level 4",
+   "Requires First Aid (20)",
+   "Use: Unpacks a first aid kit that allows you and others sitting nearby to gain [(60 (1 Hour Cooldown)",
+   "Max Stack: 20"
+  ],
+  "url": "https://www.wowhead.com/forever/item=279968"
+ },
+ "Apprentice Riding": {
+  "type": "spell",
+  "id": 33388,
+  "icon": "spell_nature_swiftness",
+  "quality": -1,
+  "lines": [
+   "Apprentice Riding",
+   "Rank 1",
+   "Allows you to ride basic ground mounts that require a riding skill of 75.",
+   "Known abilities:"
+  ],
+  "url": "https://www.wowhead.com/forever/spell=33388"
+ },
+ "Journeyman Riding": {
+  "type": "spell",
+  "id": 33391,
+  "icon": "spell_nature_swiftness",
+  "quality": -1,
+  "lines": [
+   "Journeyman Riding",
+   "Rank 2",
+   "Allows you to ride swift ground mounts that require a riding skill of 150.",
+   "Known abilities:"
+  ],
+  "url": "https://www.wowhead.com/forever/spell=33391"
+ },
+ "Valley of Trials": {
+  "none": true
+ },
+ "Sen'jin Village": {
+  "none": true
+ },
+ "Razor Hill": {
+  "none": true
+ },
+ "Tiragarde Keep": {
+  "none": true
+ },
+ "The Crossroads": {
+  "none": true
+ },
+ "Ratchet": {
+  "none": true
+ },
+ "Camp Taurajo": {
+  "none": true
+ },
+ "Booty Bay": {
+  "none": true
+ },
+ "Sun Rock Retreat": {
+  "none": true
+ },
+ "Windshear Crag": {
+  "none": true
+ },
+ "Splintertree Post": {
+  "none": true
+ },
+ "Zoram'gar Outpost": {
+  "none": true
+ },
+ "Tarren Mill": {
+  "none": true
+ },
+ "Thoradin's Wall": {
+  "none": true
+ },
+ "Hammerfall": {
+  "none": true
+ },
+ "Freewind Post": {
+  "none": true
+ },
+ "The Great Lift": {
+  "none": true
+ },
+ "The Shimmering Flats": {
+  "none": true
+ },
+ "Grom'gol Base Camp": {
+  "none": true
+ },
+ "Nesingwary's Expedition": {
+  "none": true
+ },
+ "Shadowprey Village": {
+  "none": true
+ },
+ "Ghost Walker Post": {
+  "none": true
+ },
+ "Mannoroc Coven": {
+  "none": true
+ },
+ "Kodo Graveyard": {
+  "none": true
+ },
+ "Kargath": {
+  "none": true
+ },
+ "Brackenwall Village": {
+  "none": true
+ },
+ "Rog'mar": {
+  "none": true
+ },
+ "Powderfuse Port": {
+  "none": true
+ },
+ "Steamwheedle Port": {
+  "none": true
+ },
+ "Gadgetzan": {
+  "none": true
+ },
+ "Revantusk Village": {
+  "none": true
+ },
+ "Camp Mojache": {
+  "none": true
+ },
+ "Marshal's Refuge": {
+  "none": true
+ },
+ "Emerald Sanctuary": {
+  "none": true
+ },
+ "Flame Crest": {
+  "none": true
+ },
+ "The Bulwark": {
+  "none": true
+ },
+ "Light's Hope Chapel": {
+  "none": true
+ },
+ "Cenarion Hold": {
+  "none": true
+ },
+ "Everlook": {
+  "none": true
+ },
+ "Darkwhisper Gorge": {
+  "none": true
+ },
+ "Stonard": {
+  "none": true
+ },
+ "Lower Blackrock Spire": {
+  "type": "zone",
+  "id": 1583,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Blackrock Spire",
+   "Level 55-60",
+   "Type: Zone",
+   "Territory: Contested",
+   "Location: Burning Steppes"
+  ],
+  "url": "https://www.wowhead.com/forever/zone=1583"
+ },
+ "Bloodmasters Ring": {
+  "none": true
+ },
+ "Lesser Troll's Blood Potion": {
+  "none": true
+ },
+ "Deadly Aspects": {
+  "type": "spell",
+  "id": 19552,
+  "icon": "spell_nature_ravenform",
+  "quality": -1,
+  "lines": [
+   "Deadly Aspects",
+   "Talent",
+   "Requires Hunter",
+   "While Aspect of the Hawk is active, Auto Shot has a 10% chance of increasing ranged attack speed by 30% for 12 sec. While Aspect of the Beast is active, all melee auto attacks have a 10% chance of increasing melee attack speed by 30% for 12 sec."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=19552"
+ },
+ "Focused Fire": {
+  "type": "spell",
+  "id": 1223755,
+  "icon": "inv_weapon_crossbow_10",
+  "quality": -1,
+  "lines": [
+   "Focused Fire",
+   "Talent",
+   "Requires Hunter",
+   "Requires level 1",
+   "Increases all damage you and your pet deal by 2% while your pet is active."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=1223755"
+ },
+ "Endurance Training": {
+  "type": "spell",
+  "id": 19583,
+  "icon": "spell_nature_reincarnation",
+  "quality": -1,
+  "lines": [
+   "Endurance Training",
+   "Talent",
+   "Requires Hunter",
+   "Increases the Health and Armor of your pets by 15%."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=19583"
+ },
+ "Improved Revive Pet": {
+  "type": "spell",
+  "id": 24443,
+  "icon": "ability_hunter_beastsoothe",
+  "quality": -1,
+  "lines": [
+   "Improved Revive Pet",
+   "Talent",
+   "Requires Hunter",
+   "Revive Pet's casting time is reduced by 6 sec, mana cost is reduced by 40%, and increases the health your pet returns with by an additional 30%."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=24443"
+ },
+ "Bestial Swiftness": {
+  "type": "spell",
+  "id": 19596,
+  "icon": "ability_druid_dash",
+  "quality": -1,
+  "lines": [
+   "Bestial Swiftness",
+   "Talent",
+   "Requires Hunter",
+   "Increases the movement speed of your pets by 30%."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=19596"
+ },
+ "Pathfinding": {
+  "type": "spell",
+  "id": 19559,
+  "icon": "ability_mount_jungletiger",
+  "quality": -1,
+  "lines": [
+   "Pathfinding",
+   "Talent",
+   "Requires Hunter",
+   "Increases the speed bonus of your Aspect of the Cheetah and Aspect of the Pack by 6%."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=19559"
+ },
+ "Unleashed Fury": {
+  "type": "spell",
+  "id": 19616,
+  "icon": "ability_bullrush",
+  "quality": -1,
+  "lines": [
+   "Unleashed Fury",
+   "Talent",
+   "Requires Hunter",
+   "Increases the damage done by your pets and hawks by 20%."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=19616"
+ },
+ "Summon Hawk": {
+  "type": "spell",
+  "id": 1293241,
+  "icon": "ability_hunter_animalhandler",
+  "quality": -1,
+  "lines": [
+   "Summon Hawk",
+   "Talent",
+   "11% of base mana 35 yd range",
+   "6 sec cooldownRequires Hunter",
+   "Requires level 25",
+   "Command a hawk to dive-bomb your targeted enemy, dealing [32 / Ferocity: 48 / Unleashed Fury: 52 + (Ranged Attack Power * (0.05))] Physical damage and continuing its assault for 18 sec. Only 2 hawks can be active at once. Summon Hawk shares its cooldown with Arcane Shot."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=1293241"
+ },
+ "Ferocity": {
+  "type": "spell",
+  "id": 16934,
+  "icon": "ability_hunter_pet_hyena",
+  "quality": -1,
+  "lines": [
+   "Ferocity",
+   "Talent",
+   "Requires Druid",
+   "Reduces the cost of your Maul, Primal Bite, Swipe, Claw, and Rake abilities by 1 Rage or Energy."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=16934"
+ },
+ "Intimidation": {
+  "type": "spell",
+  "id": 19577,
+  "icon": "ability_devour",
+  "quality": -1,
+  "lines": [
+   "Intimidation",
+   "Talent",
+   "8% of base mana 100 yd range",
+   "Instant 1 min cooldown",
+   "Requires Hunter",
+   "Requires level 30",
+   "Command your pet to Stun the target for 3 sec on its next successful attack, which also gains 100% increased critical strike chance. Generates high threat."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=19577"
+ },
+ "Bestial Discipline": {
+  "type": "spell",
+  "id": 19590,
+  "icon": "spell_nature_abolishmagic",
+  "quality": -1,
+  "lines": [
+   "Bestial Discipline",
+   "Talent",
+   "Requires Hunter",
+   "Increases the Focus regeneration of your pets by 100% and allows 50% of your Mana regeneration to continue while casting."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=19590"
+ },
+ "Frenzy": {
+  "type": "spell",
+  "id": 19621,
+  "icon": "inv_misc_monsterclaw_03",
+  "quality": -1,
+  "lines": [
+   "Frenzy",
+   "Talent",
+   "Requires Hunter",
+   "Gives your pet a 20% chance to gain a 30% attack speed increase for 8 sec after dealing a critical strike."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=19621"
+ },
+ "Bestial Wrath": {
+  "type": "spell",
+  "id": 19574,
+  "icon": "ability_druid_ferociousbite",
+  "quality": -1,
+  "lines": [
+   "Bestial Wrath",
+   "Talent",
+   "12% of base mana 100 yd range",
+   "Instant 2 min cooldown",
+   "Requires Hunter",
+   "Requires level 40",
+   "Send your pet into a rage causing 50% additional damage for 18 sec. While enraged, the beast does not feel pity or remorse or fear and it cannot be stopped unless killed."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=19574"
+ },
+ "Lethal Attacks": {
+  "type": "spell",
+  "id": 19426,
+  "icon": "ability_searingarrow",
+  "quality": -1,
+  "lines": [
+   "Lethal Attacks",
+   "Talent",
+   "Requires Hunter",
+   "Increases your critical strike chance with all attacks by 1%."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=19426"
+ },
+ "Careful Aim": {
+  "type": "spell",
+  "id": 1223984,
+  "icon": "ability_hunter_zenarchery",
+  "quality": -1,
+  "lines": [
+   "Careful Aim",
+   "Talent",
+   "Requires Hunter",
+   "Requires level 1",
+   "Increases your Attack Power by 100% of your Intellect."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=1223984"
+ },
+ "Rapid Killing": {
+  "type": "spell",
+  "id": 415405,
+  "icon": "ability_hunter_rapidkilling",
+  "quality": -1,
+  "lines": [
+   "Rapid Killing",
+   "Talent",
+   "Requires Hunter",
+   "Reduces the cooldown on your Rapid Fire ability by 2 min. In addition, when you kill a non-trivial enemy or it dies while afflicted by your Serpent Sting, you gain Rapid Killing, increasing the damage of your next Shot ability within 20 sec by 20%."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=415405"
+ },
+ "Efficiency": {
+  "type": "spell",
+  "id": 19416,
+  "icon": "spell_frost_wizardmark",
+  "quality": -1,
+  "lines": [
+   "Efficiency",
+   "Talent",
+   "Requires Hunter",
+   "Reduces the Mana cost of your Shots, Stings, and melee abilities by 15%."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=19416"
+ },
+ "Trueshot Aura": {
+  "type": "spell",
+  "id": 1299346,
+  "icon": "ability_trueshot",
+  "quality": -1,
+  "lines": [
+   "Trueshot Aura",
+   "Talent",
+   "180 Mana",
+   "InstantRequires Hunter",
+   "Requires level 25",
+   "Increases the Ranged Attack Power of party or raid members within 45 yds by 20."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=1299346"
+ },
+ "Mortal Shots": {
+  "type": "spell",
+  "id": 19485,
+  "icon": "ability_piercedamage",
+  "quality": -1,
+  "lines": [
+   "Mortal Shots",
+   "Talent",
+   "Requires Hunter",
+   "Increases the critical strike damage bonus on all ranged abilities by 30%."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=19485"
+ },
+ "Lone Wolf": {
+  "type": "spell",
+  "id": 415370,
+  "icon": "ability_mount_whitedirewolf",
+  "quality": -1,
+  "lines": [
+   "Lone Wolf",
+   "Talent",
+   "Requires Hunter",
+   "Requires level 1",
+   "You deal 20% increased damage with all attacks while you do not have an active pet."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=415370"
+ },
+ "Hawk Eye": {
+  "type": "spell",
+  "id": 19498,
+  "icon": "ability_townwatch",
+  "quality": -1,
+  "lines": [
+   "Hawk Eye",
+   "Talent",
+   "Requires Hunter",
+   "Increases the range of your ranged weapons by 6 yards."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=19498"
+ },
+ "Improved Concussive Shot": {
+  "type": "spell",
+  "id": 19407,
+  "icon": "spell_frost_stun",
+  "quality": -1,
+  "lines": [
+   "Improved Concussive Shot",
+   "Talent",
+   "Requires Hunter",
+   "Gives your Concussive Shot a 0% chance to stun the target for 3 sec."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=19407"
+ },
+ "Improved Stings": {
+  "type": "spell",
+  "id": 1310661,
+  "icon": "ability_hunter_quickshot",
+  "quality": -1,
+  "lines": [
+   "Improved Stings",
+   "Talent",
+   "Requires Hunter",
+   "Increases the damage of your Serpent Sting ability by 20%, reduces the cooldown of your Viper Sting ability by 6 sec, and increases the duration of your Scorpid Sting ability by 45 sec."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=1310661"
+ },
+ "Barrage": {
+  "type": "spell",
+  "id": 19461,
+  "icon": "ability_upgrademoonglaive",
+  "quality": -1,
+  "lines": [
+   "Barrage",
+   "Talent",
+   "Requires Hunter",
+   "Increases the damage done by your Multi-Shot, Aimed Shot, and Volley abilities by 15%."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=19461"
+ },
+ "Scatter Shot": {
+  "type": "spell",
+  "id": 19503,
+  "icon": "ability_golemstormbolt",
+  "quality": -1,
+  "lines": [
+   "Scatter Shot",
+   "Talent",
+   "8% of base mana 15 yd range",
+   "30 sec cooldownRequires Hunter",
+   "Requires level 30",
+   "Requires Ranged WeaponA short-range shot that deals 50% weapon damage and disorients the target for 4 sec. Any damage caused will remove the effect. Turns off your attack when used."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=19503"
+ },
+ "Ranged Weapon Specialization": {
+  "type": "spell",
+  "id": 19507,
+  "icon": "inv_weapon_rifle_06",
+  "quality": -1,
+  "lines": [
+   "Ranged Weapon Specialization",
+   "Talent",
+   "Requires Hunter",
+   "Requires Ranged WeaponIncreases the damage you deal with ranged weapons by 5%."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=19507"
+ },
+ "Sniper Shot": {
+  "type": "spell",
+  "id": 1310687,
+  "icon": "hunter_pvp_snipershot",
+  "quality": -1,
+  "lines": [
+   "Sniper Shot",
+   "Talent",
+   "365 Mana 8 - 45 yd range",
+   "4 sec cast 15 sec cooldown",
+   "Requires Hunter",
+   "Requires level 40",
+   "Requires Ranged WeaponA long-range shot that deals ranged damage plus 320 and increases the range of your next 3 Shots by 10 yards for 10 sec."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=1310687"
+ },
+ "Deflection": {
+  "type": "spell",
+  "id": 16462,
+  "icon": "ability_parry",
+  "quality": -1,
+  "lines": [
+   "Deflection",
+   "Talent",
+   "Requires Warrior",
+   "Increases your Parry chance by 1%."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=16462"
+ },
+ "Entrapment": {
+  "type": "spell",
+  "id": 19184,
+  "icon": "spell_nature_stranglevines",
+  "quality": -1,
+  "lines": [
+   "Entrapment",
+   "Talent",
+   "Requires Hunter",
+   "When your traps are triggered, all affected targets are Entrapped, preventing them from moving for 5 sec."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=19184"
+ },
+ "Improved Wing Clip": {
+  "type": "spell",
+  "id": 19228,
+  "icon": "ability_rogue_trip",
+  "quality": -1,
+  "lines": [
+   "Improved Wing Clip",
+   "Talent",
+   "Requires Hunter",
+   "Gives your Wing Clip ability a 20% chance to immobilize the target for 5 sec."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=19228"
+ },
+ "Surefooted": {
+  "type": "spell",
+  "id": 19290,
+  "icon": "ability_kick",
+  "quality": -1,
+  "lines": [
+   "Surefooted",
+   "Talent",
+   "Requires Hunter",
+   "Increases your hit chance by 3% and reduces the duration of movement impairing effects on you by 30%."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=19290"
+ },
+ "Deterrence": {
+  "type": "spell",
+  "id": 19263,
+  "icon": "ability_whirlwind",
+  "quality": -1,
+  "lines": [
+   "Deterrence",
+   "Talent",
+   "Instant 5 min cooldown",
+   "Requires Hunter",
+   "Requires level 20",
+   "When activated, increases your Dodge and Parry chance by 25% for 10 sec."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=19263"
+ },
+ "Counterattack": {
+  "type": "spell",
+  "id": 19306,
+  "icon": "ability_warrior_challange",
+  "quality": -1,
+  "lines": [
+   "Counterattack",
+   "Talent",
+   "30 Mana Melee Range",
+   "Instant 5 sec cooldown",
+   "Requires Hunter",
+   "Requires level 30",
+   "Requires Melee WeaponA strike that becomes active after parrying an opponent's attack. This attack deals 50% weapon damage plus 26 and immobilizes the target for 5 sec. Counterattack cannot be blocked, dodged, or parried."
+  ],
+  "url": "https://www.wowhead.com/forever/spell=19306"
+ },
+ "Taming the Beast": {
+  "type": "quest",
+  "id": 6083,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Taming the Beast",
+   "Use the Taming Rod to tame a Surf Crawler. Practice your skills, then return the Taming Rod to Thotar at Razor Hill.",
+   "Requirements:",
+   "- Tame a Surf Crawler"
+  ],
+  "url": "https://www.wowhead.com/forever/quest=6083"
+ },
+ "Training the Beast": {
+  "type": "quest",
+  "id": 6081,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Training the Beast",
+   "Speak with Ormak Grimshot in Orgrimmar."
+  ],
+  "url": "https://www.wowhead.com/forever/quest=6081"
+ },
+ "Leaders of the Fang": {
+  "type": "quest",
+  "id": 914,
+  "icon": "",
+  "quality": null,
+  "lines": [
+   "Leaders of the Fang",
+   "Level 22",
+   "Bring the Gems of Cobrahn, Anacondra, Pythas and Serpentis to Nara Wildmane in Thunder Bluff.",
+   "Requirements:",
+   "- Gem of Cobrahn",
+   "- Gem of Anacondra",
+   "- Gem of Pythas",
+   "- Gem of Serpentis"
+  ],
+  "url": "https://www.wowhead.com/forever/quest=914"
+ },
+ "Vengeful Fate": {
+  "none": true
+ }
+}

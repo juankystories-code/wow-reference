@@ -11,8 +11,9 @@
   const BASE = D.estado.nivel;
   let L = clamp(parseInt(store.get('nivel'), 10) || BASE);
   let pendingScroll = null;
+  let jump = false;
   function clamp(n) { return Math.max(1, Math.min(60, n || 1)); }
-  const pageId = () => { const h = location.hash.slice(1); return D.docs[h] ? h : 'inicio'; };
+  const pageId = () => { const h = location.hash.slice(1); return D.docs[h] || h === 'glosario' ? h : 'inicio'; };
   const has = (v) => v && !/^\(/.test(v);
 
   const theme = store.get('tema');
@@ -43,11 +44,12 @@
 
   // ---------- Esqueleto ----------
   const GROUPS = [
-    ['Leveo', ['ruta', 'talentos', 'hechizos', 'mascotas', 'armas']],
+    ['Consulta', ['glosario', 'ruta', 'talentos', 'hechizos', 'mascotas', 'armas']],
     ['El cazador y Forever', ['mecanicas', 'sistemas', 'profesiones', 'dinero', 'addons']],
     ['Mi partida', ['estado', 'fuentes']],
   ];
   const label = Object.fromEntries(D.nav.map((n) => [n.id, n.label]));
+  label.glosario = 'Glosario';
   app.innerHTML = `
   <div class="shell">
     <aside class="side">
@@ -61,7 +63,7 @@
         <span><b>Diario del Cazador</b><small>Troll Hunter · WoW Forever</small></span>
       </a>
       <nav class="nav" aria-label="Secciones">
-        <a href="#inicio" data-p="inicio">Qué toca ahora</a>
+        <a href="#inicio" data-p="inicio">Lineup 1-60</a>
         ${GROUPS.map(([g, ids]) => `<div class="grp">${g}</div>${ids.map((id) => `<a href="#${id}" data-p="${id}">${label[id]}</a>`).join('')}`).join('')}
       </nav>
       <div class="side-foot">
@@ -97,6 +99,8 @@
     document.getElementById('lvl-out').textContent = L;
     document.getElementById('lvl-range').value = L;
     document.getElementById('lvl-reset').hidden = L === BASE;
+    tramo = tramoOf(L);
+    jump = true;
     render(false);
   }
   document.getElementById('lvl-dn').onclick = () => setLevel(L - 1);
@@ -112,138 +116,103 @@
     e.target.textContent = `Tema: ${nxt === 'light' ? 'claro' : nxt === 'dark' ? 'oscuro' : 'sistema'}`;
   };
 
-  // ---------- Inicio ----------
-  function trackRows() {
-    return D.resumen.map((r, i) => {
-      const q = quality(r.min, r.max, L);
-      const w = Math.max(pct(r.max) - pct(r.min), 1.2);
-      return `<button type="button" class="trow ${r.isDungeon ? 'dg' : ''}" data-ruta="${r.min}" title="${r.zone}${r.alt && r.alt !== '—' ? ' · alternativa: ' + r.alt : ''}">
-        <span class="tl"><small>${r.min}-${r.max}</small>${r.zone}</span>
-        <span class="bar ${q}"><i style="left:${pct(r.min)}%;width:${w}%"></i>${i === 0 ? '' : ''}<span class="now" style="left:calc(${pct(L)}% - 1px)"></span></span>
-      </button>`;
-    }).join('');
-  }
-  function routeSectionsFor(l) { return D.docs.ruta.sections.filter((s) => inRange(s.range, l)); }
+  // ---------- Lineup ----------
+  const TAGS = {
+    zona: 'Zona', entrenar: 'Entrenar', talento: 'Talento', mascota: 'Mascota', arma: 'Arma', comprar: 'Comprar',
+    mazmorra: 'Mazmorra', mision: 'Misión', profesion: 'Oficio', sistema: 'Sistema', ojo: 'Ojo', saltar: 'No entrenes',
+  };
+  const TRAMOS = [[1, 10], [11, 20], [21, 30], [31, 40], [41, 50], [51, 60]];
+  const tramoOf = (l) => Math.min(5, Math.floor((l - 1) / 10));
+  let tramo = tramoOf(L);
+  let done;
+  try { done = new Set(JSON.parse(store.get('hecho') || '[]')); } catch { done = new Set(); }
+  let hideDone = store.get('ocultar') === '1';
+  const saveDone = () => store.set('hecho', JSON.stringify([...done]));
+  const countable = (lv) => lv.items.filter((i) => i.tag !== 'saltar' && i.tag !== 'ojo');
+  const stats = (lvls) => {
+    const all = lvls.flatMap(countable);
+    return [all.filter((i) => done.has(i.id)).length, all.length];
+  };
 
-  function renderHome() {
-    const e = D.estado;
-    const name = has(e.nombre) ? e.nombre : 'Troll Hunter';
-    const now = D.resumen.filter((r) => inRange([r.min, r.max], L));
-    const secs = routeSectionsFor(L);
-
-    // talentos
-    const tNow = D.talents.filter((t) => inRange(t.range, L));
-    const tNext = D.talents.filter((t) => t.range[0] > L).slice(0, 3);
-    const tPrev = D.talents.filter((t) => t.range[1] < L).slice(-1);
-    const tal = [...tPrev.map((t) => ['past', t]), ...tNow.map((t) => ['cur', t]), ...tNext.map((t) => ['', t])]
-      .map(([c, t]) => `<li class="${c}"><span class="n">${lvTxt(t.range)}</span><span>${t.html}</span></li>`).join('');
-
-    // hechizos
-    const tl = Math.max(...D.spells.filter((s) => s.lvl <= L).map((s) => s.lvl));
-    const nl = Math.min(...D.spells.filter((s) => s.lvl > L).map((s) => s.lvl).concat([99]));
-    const spellLi = (s) => `<li class="${s.kind === 'no' ? 'past' : ''}"><span class="n">${s.kind === 'si' ? 'Sí' : s.kind === 'no' ? 'Saltar' : 'Info'}</span><span>${s.html}${s.kind !== 'no' && s.note.replace(/^Sí\.?\s*/, '') ? ` <span class="muted small">· ${s.note.replace(/^Sí\.?\s*/, '')}</span>` : ''}</span></li>`;
-    const sNow = D.spells.filter((s) => s.lvl === tl);
-    const sNext = D.spells.filter((s) => s.lvl === nl);
-
-    // mascota
-    const main = D.pets.filter((p) => !p.optional);
-    const pCur = main.filter((p) => p.range[0] <= L).slice(-1)[0];
-    const pNext = main.find((p) => p.range[0] > L);
-    const pOpt = D.pets.filter((p) => p.optional && p.range[0] <= L + 3 && p.range[0] >= (pCur ? pCur.range[0] : 0));
-
-    // arma
-    const go = D.weapons.filter((w) => w.go);
-    const wCur = go.filter((w) => w.range[0] <= L).slice(-1)[0];
-    const wNext = go.filter((w) => w.range[0] > L).slice(0, 2);
-    const wSide = D.weapons.filter((w) => !w.go && w.range[0] > L - 2 && w.range[0] <= L + 4);
-
-    const ms = D.milestones.filter((m) => m.lvl >= L).slice(0, 5);
-    const gold = D.gold.filter((g) => g.range[1] >= L && g.range[0] > 1).slice(0, 3);
-
+  function renderHome(scrollToCur) {
+    const [a, b] = TRAMOS[tramo];
+    const lvls = D.lineup.filter((l) => l.lvl >= a && l.lvl <= b);
+    const [dn, tot] = stats(lvls);
     view.innerHTML = `
-    <section class="hero">
-      <div class="crest" aria-label="Nivel ${L}"><b>${L}</b><span>nivel</span></div>
-      <div>
-        <div class="eyebrow">Horda · Beast Mastery · Europa PvP</div>
-        <h1>${name}, <em>${now.length ? now.map((r) => r.zone).join(' + ') : 'a por el 60'}</em></h1>
-        <div class="facts">
-          <span>Reino <b>${has(e.reino) ? e.reino : 'por elegir'}</b></span>
-          <span>Zona <b>${has(e.zona) ? e.zona : 'sin empezar'}</b></span>
-          <span>Oro <b>${e.oro || 0} g</b></span>
-          <span>Mascota <b>${has(e.mascota) ? e.mascota : 'ninguna'}</b></span>
-        </div>
-        ${L !== BASE ? `<p class="small muted" style="margin:8px 0 0">Estás mirando el nivel ${L}. En estado.md el personaje está a nivel ${BASE}.</p>` : ''}
+    <header class="lu-head">
+      <div class="lu-title">
+        <span class="eyebrow">Lineup · nivel a nivel</span>
+        <h1>Del ${a} al ${b}</h1>
+        <div class="prog" role="img" aria-label="${dn} de ${tot} hechas"><i style="width:${tot ? (dn / tot) * 100 : 0}%"></i></div>
+        <span class="small muted">${dn} de ${tot} hechas</span>
       </div>
-    </section>
-
-    <section class="track-wrap" aria-label="Tramos de la ruta">
-      <div class="track-head">
-        <h2>La ruta, del 1 al 60</h2>
-        <div class="legend">
-          <span><i style="background:var(--q-red)"></i>Muy alto</span><span><i style="background:var(--q-orange)"></i>Alto</span>
-          <span><i style="background:var(--q-yellow)"></i>Tu nivel</span><span><i style="background:var(--q-green)"></i>Fácil</span>
-          <span><i style="background:var(--q-grey)"></i>Gris</span>
-        </div>
+      <div class="tabs" role="tablist" aria-label="Tramos">
+        ${TRAMOS.map(([x, y], i) => {
+          const [d2, t2] = stats(D.lineup.filter((l) => l.lvl >= x && l.lvl <= y));
+          return `<button type="button" role="tab" data-tramo="${i}" aria-selected="${i === tramo}" class="${tramoOf(L) === i ? 'has-me' : ''}">${x}-${y}<small>${t2 && d2 === t2 ? '✓' : `${d2}/${t2}`}</small></button>`;
+        }).join('')}
       </div>
-      <div class="rows">${trackRows()}</div>
-      <div class="axis"><span></span><div>${[1, 10, 20, 30, 40, 50, 60].map((v) => `<span style="left:${pct(v)}%">${v}</span>`).join('')}</div></div>
-    </section>
-
-    <div class="grid">
-      <article class="card wide">
-        <span class="sub">Dónde ir a nivel ${L}</span>
-        <div class="kv">
-          ${now.map((r) => `<dt>${r.min}-${r.max}</dt><dd><strong>${r.zone}</strong>${r.alt && r.alt !== '—' ? ` <span class="muted">· alternativa: ${r.alt}</span>` : ''}${r.dungeon && !r.isDungeon ? ` <span class="muted">· mazmorra: ${r.dungeon}</span>` : ''}</dd>`).join('')}
-        </div>
-        ${secs.map((s, i) => `<details class="sec" ${i === 0 ? 'open' : ''}><summary>${s.titleHtml}</summary><div class="prose">${s.html}</div></details>`).join('')}
-      </article>
-
-      <article class="card">
-        <h3>Talentos <a href="#talentos">Orden completo →</a></h3>
-        ${L < 10 ? '<p class="small muted">El primer punto llega a nivel 10.</p>' : ''}
-        <ul class="ladder">${tal}</ul>
-      </article>
-
-      <article class="card">
-        <h3>Entrenar <a href="#hechizos">Todos →</a></h3>
-        <span class="sub">Nivel ${tl}</span>
-        <ul class="ladder">${sNow.map(spellLi).join('')}</ul>
-        ${sNext.length ? `<div class="next"><span class="sub">Siguiente: nivel ${nl}</span><ul class="ladder">${sNext.map(spellLi).join('')}</ul></div>` : ''}
-      </article>
-
-      <article class="card">
-        <h3>Mascota <a href="#mascotas">Guía →</a></h3>
-        ${pCur ? `<div class="big">${pCur.name}</div><p class="small">${pCur.where}</p><p class="small muted">${pCur.why}</p>`
-        : '<p>Sin mascota hasta nivel 10. Ponte Aspect of the Monkey y kitea.</p>'}
-        ${pOpt.map((p) => `<p class="small"><span class="pill q-green">Opcional ${lvTxt(p.range)}</span> ${p.name}: ${p.where}</p>`).join('')}
-        ${pNext ? `<div class="next"><span class="sub">Siguiente: nivel ${lvTxt(pNext.range)}</span>${pNext.name} · ${pNext.where}</div>` : ''}
-      </article>
-
-      <article class="card">
-        <h3>Arma a distancia <a href="#armas">Tabla →</a></h3>
-        ${wCur ? `<span class="sub">Deberías llevar (nivel ${lvTxt(wCur.range)})</span><div class="big">${wCur.name}</div><p class="small muted">${wCur.how}</p>` : ''}
-        ${wSide.map((w) => `<p class="small"><span class="pill q-grey">${lvTxt(w.range)}</span> ${w.name} · <span class="muted">${w.note}</span></p>`).join('')}
-        ${wNext.map((w) => `<div class="next"><span class="sub">Siguiente objetivo: nivel ${lvTxt(w.range)}</span><strong>${w.name}</strong> · ${w.how}</div>`).join('')}
-      </article>
-
-      <article class="card">
-        <h3>Próximos hitos</h3>
-        <ul class="ladder">${ms.map((m) => `<li class="${m.lvl === L ? 'cur' : ''}"><span class="n">${m.lvl}</span><span>${m.html} <a href="#${m.page}" class="small">ver</a></span></li>`).join('')}</ul>
-      </article>
-
-      <article class="card">
-        <h3>Oro <a href="#dinero">Dinero →</a></h3>
-        <ul class="ladder">${gold.map((g) => `<li><span class="n">${lvTxt(g.range)}</span><span><strong>${g.what}</strong><br><span class="small muted">${g.cost}</span></span></li>`).join('')}</ul>
-      </article>
-
-      <article class="card wide">
-        <h3>Antes de cerrar sesión <a href="#sistemas">Sistemas →</a></h3>
-        <div class="prose">${D.rutina}</div>
-      </article>
-
-      ${D.huecos ? `<article class="card wide gaps"><h3>Por verificar en el juego</h3><div class="prose small">${D.huecos}</div></article>` : ''}
-    </div>`;
+      <label class="hide-done"><input type="checkbox" id="hide-done" ${hideDone ? 'checked' : ''}> Ocultar lo hecho</label>
+    </header>
+    <ol class="lu ${hideDone ? 'hide' : ''}">
+      ${lvls.map((lv) => {
+        const cls = lv.lvl === L ? 'cur' : lv.lvl < L ? 'past' : '';
+        if (!lv.items.length) {
+          return `<li class="lv empty ${cls}" id="lv-${lv.lvl}"><div class="lv-num">${lv.lvl}</div><div class="lv-empty">Nada nuevo. Sigue con las misiones de ${lv.zone}.${lv.lvl === L ? ' <span class="here-pill">Estás aquí</span>' : ''}</div></li>`;
+        }
+        const [d3, t3] = stats([lv]);
+        return `<li class="lv ${cls}" id="lv-${lv.lvl}">
+          <details ${lv.lvl >= L ? 'open' : ''}>
+            <summary>
+              <span class="lv-num">${lv.lvl}</span>
+              <span class="lv-name">${lv.title || `<span class="muted">${lv.zone}</span>`}</span>
+              ${lv.lvl === L ? '<span class="here-pill">Estás aquí</span>' : `<button type="button" class="set-lv" data-setlv="${lv.lvl}">Estoy aquí</button>`}
+              <span class="cnt ${t3 && d3 === t3 ? 'ok' : ''}">${t3 && d3 === t3 ? '✓' : `${d3}/${t3}`}</span>
+            </summary>
+            <ul class="acts">
+              ${lv.items.map((it) => {
+                const check = it.tag !== 'saltar' && it.tag !== 'ojo';
+                const isDone = done.has(it.id);
+                return `<li class="act t-${it.tag} ${isDone ? 'done' : ''}">
+                  ${check ? `<input type="checkbox" id="c-${it.id}" data-id="${it.id}" ${isDone ? 'checked' : ''}>` : '<span class="nocheck" aria-hidden="true"></span>'}
+                  <span class="tag">${TAGS[it.tag] || it.tag}</span>
+                  <label class="txt" ${check ? `for="c-${it.id}"` : ''}>${it.html}</label>
+                </li>`;
+              }).join('')}
+            </ul>
+          </details>
+        </li>`;
+      }).join('')}
+    </ol>
+    <details class="rutina"><summary>Antes de cerrar sesión</summary><div class="prose">${D.rutina}</div></details>`;
+    linkTerms(view);
+    if (scrollToCur) {
+      const el = document.getElementById('lv-' + L);
+      // Solo salta si tu nivel queda por debajo de la primera pantalla; así la cabecera del tramo sigue a la vista.
+      if (el && tramoOf(L) === tramo) requestAnimationFrame(() => {
+        const top = el.getBoundingClientRect().top + window.scrollY;
+        window.scrollTo(0, top > window.innerHeight * 0.6 ? top - 80 : 0);
+      });
+    }
   }
+
+  view.addEventListener('change', (e) => {
+    const id = e.target.dataset && e.target.dataset.id;
+    if (id) {
+      if (e.target.checked) done.add(id); else done.delete(id);
+      saveDone();
+      const y = window.scrollY; renderHome(false); window.scrollTo(0, y);
+    } else if (e.target.id === 'hide-done') {
+      hideDone = e.target.checked; store.set('ocultar', hideDone ? '1' : '0');
+      view.querySelector('.lu').classList.toggle('hide', hideDone);
+    }
+  });
+  view.addEventListener('click', (e) => {
+    const t = e.target.closest('[data-tramo]');
+    if (t) { tramo = +t.dataset.tramo; renderHome(false); window.scrollTo(0, 0); return; }
+    const s = e.target.closest('[data-setlv]');
+    if (s) { e.preventDefault(); e.stopPropagation(); setLevel(+s.dataset.setlv); }
+  });
 
   // ---------- Páginas de la guía ----------
   function parseLv(txt) {
@@ -275,6 +244,7 @@
       <div class="prose">${d.intro}</div>
       ${d.sections.map((s) => `<section class="doc-sec ${inRange(s.range, L) ? 'here' : ''}" id="s-${s.slug}"><h2>${s.titleHtml}</h2><div class="prose">${s.html}</div></section>`).join('')}`;
     markTables(view);
+    linkTerms(view);
   }
 
   function render(scrollTop) {
@@ -283,7 +253,8 @@
       if (a.dataset.p === id) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
     });
     const y = window.scrollY;
-    if (id === 'inicio') renderHome(); else renderDoc(id);
+    if (id === 'inicio') { renderHome(scrollTop || jump); const j = jump || scrollTop; jump = false; if (j) return; } else if (id === 'glosario') renderGlossary(); else renderDoc(id);
+    jump = false;
     if (pendingScroll) {
       const el = document.getElementById('s-' + pendingScroll);
       pendingScroll = null;
@@ -293,10 +264,137 @@
   }
   window.addEventListener('hashchange', () => render(true));
 
+  // ---------- Glosario ----------
+  const G = D.glossary;
+  const KIND = {
+    zona: 'Zona', mazmorra: 'Mazmorra', npc: 'PNJ', objeto: 'Objeto', hechizo: 'Hechizo', talento: 'Talento',
+    mascota: 'Habilidad de mascota', mision: 'Misión', oficio: 'Profesión', sistema: 'Sistema de Forever', jerga: 'Jerga',
+  };
+  const KGLYPH = { zona: 'Z', mazmorra: 'M', npc: 'P', objeto: 'O', hechizo: 'H', talento: 'T', mascota: 'H', mision: '!', oficio: 'O', sistema: 'F', jerga: '?' };
+  const byKey = new Map();
+  for (const [i, e] of G.entries()) for (const k of [e.n, ...e.a]) if (!byKey.has(k.toLowerCase())) byKey.set(k.toLowerCase(), i);
+  const reEsc = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\  // ---------- Clics ----------');
+  const termRe = new RegExp(`(?<![\\p{L}\\p{N}'])(${[...byKey.keys()].sort((a, b) => b.length - a.length).map(reEsc).join('|')})(?![\\p{L}\\p{N}'])`, 'giu');
+  const SKIP = 'a, button, code, pre, input, textarea, .term, .tip, .g-name, .tag, .lv-num, .eyebrow, th, .toc, .results';
+  const iconHtml = (e, cls) => e.i
+    ? `<img class="${cls}${e.gen ? ' gen' : ''}" src="${D.icons[e.i]}" alt="" width="36" height="36">`
+    : `<span class="${cls} glyph k-${e.k}" aria-hidden="true">${KGLYPH[e.k] || '?'}</span>`;
+
+  function linkTerms(root) {
+    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+      acceptNode: (n) => (!n.nodeValue.trim() || n.parentElement.closest(SKIP) ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT),
+    });
+    const nodes = [];
+    while (walker.nextNode()) nodes.push(walker.currentNode);
+    for (const n of nodes) {
+      const txt = n.nodeValue;
+      termRe.lastIndex = 0;
+      if (!termRe.test(txt)) continue;
+      termRe.lastIndex = 0;
+      const frag = document.createDocumentFragment();
+      let last = 0, m;
+      while ((m = termRe.exec(txt))) {
+        const i = byKey.get(m[1].toLowerCase());
+        if (i == null) continue;
+        if (m.index > last) frag.appendChild(document.createTextNode(txt.slice(last, m.index)));
+        const s = document.createElement('span');
+        const e = G[i];
+        s.className = `term k-${e.k}${e.q != null ? ' q' + e.q : ''}`;
+        s.dataset.g = i; s.tabIndex = 0; s.setAttribute('role', 'button');
+        s.textContent = m[1];
+        frag.appendChild(s);
+        last = m.index + m[1].length;
+      }
+      if (last < txt.length) frag.appendChild(document.createTextNode(txt.slice(last)));
+      n.parentNode.replaceChild(frag, n);
+    }
+  }
+
+  // Ficha flotante
+  const tip = document.createElement('div');
+  tip.className = 'tip'; tip.hidden = true; tip.setAttribute('role', 'tooltip');
+  document.body.appendChild(tip);
+  let tipFor = null, pinned = false, hoverT = null;
+  function showTip(el, pin) {
+    const e = G[+el.dataset.g];
+    tip.innerHTML = `
+      <div class="tip-head">${iconHtml(e, 'tip-ic')}<div><div class="tip-name ${e.q != null ? 'q' + e.q : ''}">${e.n}</div><div class="tip-kind">${KIND[e.k] || e.k}</div></div></div>
+      <p class="tip-desc">${e.d}</p>${e.z ? `<p class="tip-zone">Está en: ${e.z}</p>` : ''}
+      ${e.l ? `<div class="tip-game"><span>En el juego</span>${e.l.map((l) => `<div>${l}</div>`).join('')}</div>` : ''}
+      <div class="tip-foot"><a href="#glosario" data-gl="${e.id}">Glosario</a>${e.u ? `<a href="${e.u}" target="_blank" rel="noopener">Wowhead ↗</a>` : ''}</div>`;
+    tip.hidden = false; tipFor = el; pinned = !!pin;
+    const r = el.getBoundingClientRect();
+    const w = tip.offsetWidth, h = tip.offsetHeight;
+    let left = Math.min(Math.max(8, r.left), window.innerWidth - w - 8);
+    let top = r.bottom + 6;
+    if (top + h > window.innerHeight - 8 && r.top - h - 6 > 8) top = r.top - h - 6;
+    tip.style.left = left + 'px'; tip.style.top = Math.max(8, top) + 'px';
+  }
+  function hideTip() { tip.hidden = true; tipFor = null; pinned = false; }
+  const canHover = window.matchMedia('(hover: hover)').matches;
+  document.addEventListener('mouseover', (ev) => {
+    if (!canHover) return;
+    const el = ev.target.closest('.term');
+    if (el && el !== tipFor && !pinned) { clearTimeout(hoverT); hoverT = setTimeout(() => showTip(el, false), 120); }
+  });
+  document.addEventListener('mouseout', (ev) => {
+    if (!canHover || pinned) return;
+    const to = ev.relatedTarget;
+    if (ev.target.closest('.term') && !(to && (to.closest('.tip') || to.closest('.term') === tipFor))) { clearTimeout(hoverT); hoverT = setTimeout(hideTip, 150); }
+    if (ev.target.closest('.tip') && !(to && (to.closest('.tip') || to.closest('.term')))) { clearTimeout(hoverT); hoverT = setTimeout(hideTip, 150); }
+  });
+  tip.addEventListener('mouseenter', () => clearTimeout(hoverT));
+  document.addEventListener('click', (ev) => {
+    const el = ev.target.closest('.term');
+    if (el) { ev.preventDefault(); ev.stopPropagation(); if (tipFor === el && pinned) hideTip(); else showTip(el, true); return; }
+    const gl = ev.target.closest('[data-gl]');
+    if (gl) { ev.preventDefault(); hideTip(); pendingScroll = 'g-' + gl.dataset.gl; if (pageId() === 'glosario') render(false); else location.hash = 'glosario'; return; }
+    if (!ev.target.closest('.tip')) hideTip();
+  }, true);
+  document.addEventListener('keydown', (ev) => {
+    if (ev.key === 'Escape') hideTip();
+    if ((ev.key === 'Enter' || ev.key === ' ') && document.activeElement.classList.contains('term')) { ev.preventDefault(); showTip(document.activeElement, true); }
+  });
+  window.addEventListener('scroll', () => { if (!tip.hidden) hideTip(); }, { passive: true });
+
+  // Página del glosario
+  let gFilter = '';
+  function renderGlossary() {
+    const sections = [...new Set(G.map((e) => e.s))];
+    const f = norm(gFilter.trim());
+    const match = (e) => !f || norm(e.n + ' ' + e.a.join(' ') + ' ' + e.d).includes(f);
+    view.innerHTML = `
+      <header class="page-head"><span class="eyebrow">Consulta</span><h1>Glosario</h1>
+        <p class="muted small" style="margin:0">Qué es cada nombre de la guía. Los datos "En el juego" e iconos vienen de la base de datos de WoW Forever de Wowhead.</p></header>
+      <div class="g-filter"><input id="g-filter" type="search" placeholder="Filtra: trampa, Orgrimmar, élite…" value="${escH(gFilter)}" autocomplete="off"></div>
+      <nav class="toc" aria-label="Secciones">${sections.map((s) => `<button type="button" data-go="${slugify(s)}">${s}</button>`).join('')}</nav>
+      ${sections.map((s) => {
+        const list = G.filter((e) => e.s === s && match(e));
+        if (!list.length) return '';
+        return `<section class="doc-sec" id="s-${slugify(s)}"><h2>${s}</h2><div class="g-list">${list.map((e) => `
+          <article class="g-item" id="s-g-${e.id}">
+            ${iconHtml(e, 'g-ic')}
+            <div class="g-body">
+              <div class="g-name ${e.q != null ? 'q' + e.q : ''}">${e.n}${e.a.length ? ` <span class="muted small">(${e.a.join(', ')})</span>` : ''}</div>
+              <div class="g-desc">${e.d}${e.z ? ` <span class="muted">Está en: ${e.z}.</span>` : ''}</div>
+              ${e.l || e.u ? `<details class="g-game"><summary>En el juego</summary>${(e.l || []).map((l) => `<div>${l}</div>`).join('')}${e.u ? `<a href="${e.u}" target="_blank" rel="noopener">Ver en Wowhead ↗</a>` : ''}</details>` : ''}
+            </div>
+          </article>`).join('')}</div></section>`;
+      }).join('')}`;
+    linkTerms(view);
+    const inp = document.getElementById('g-filter');
+    inp.addEventListener('input', () => {
+      gFilter = inp.value; const pos = inp.selectionStart;
+      renderGlossary();
+      const n = document.getElementById('g-filter'); n.focus(); n.setSelectionRange(pos, pos);
+    });
+  }
+  function slugify(s) { return norm(s).replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''); }
+
   // ---------- Clics ----------
   document.addEventListener('click', (e) => {
     const way = e.target.closest('[data-copy]');
-    if (way) { copy(way.dataset.copy); return; }
+    if (way) { e.preventDefault(); copy(way.dataset.copy); return; }
     const cc = e.target.closest('[data-copy-code]');
     if (cc) { copy(cc.parentElement.querySelector('code').textContent, 'macro'); return; }
     const go = e.target.closest('[data-go]');
@@ -312,7 +410,7 @@
 
   // ---------- Búsqueda ----------
   const norm = (s) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
-  const index = [];
+  const index = G.map((e) => ({ id: 'glosario', slug: 'g-' + e.id, where: 'Glosario › ' + e.n, text: e.d.replace(/<[^>]+>/g, ''), n: norm(e.n + ' ' + e.a.join(' ')) + ' ' + norm(e.d.replace(/<[^>]+>/g, '')), g: true }));
   for (const [id, d] of Object.entries(D.docs)) {
     for (const s of d.sections) index.push({ id, slug: s.slug, where: `${label[id]} › ${s.title.replace(/\*\*/g, '')}`, text: s.text, n: norm(s.title + ' ' + s.text) });
   }
@@ -323,7 +421,8 @@
   function search() {
     const terms = norm(q.value.trim()).split(/\s+/).filter(Boolean);
     if (!terms.length) { res.hidden = true; return; }
-    const hits = index.filter((x) => terms.every((t) => x.n.includes(t))).slice(0, 12);
+    const score = (x) => (x.g ? (terms.every((t) => norm(x.where).includes(t)) ? 0 : 2) : 1);
+    const hits = index.filter((x) => terms.every((t) => x.n.includes(t))).sort((a, b) => score(a) - score(b)).slice(0, 12);
     sel = -1;
     res.innerHTML = hits.length ? hits.map((h, i) => {
       const p = norm(h.text).indexOf(terms[0]);
@@ -357,5 +456,5 @@
     if (e.key === '/' && document.activeElement !== q && !/input|textarea/i.test(document.activeElement.tagName)) { e.preventDefault(); q.focus(); }
   });
 
-  render(false);
+  render(true);
 })();

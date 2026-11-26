@@ -12,7 +12,7 @@ Son todas guías de **WoW Forever**, salvo donde se indica otra cosa. Varias se 
 ## Wikis y bases de datos
 - Warcraft Wiki, WoW Forever: https://warcraft.wiki.gg/wiki/WoW_Forever
 - Forever Database: https://forever.warcraftdb.com/
-- Wowhead Forever: https://www.wowhead.com/forever (no verificada)
+- Wowhead Forever: https://www.wowhead.com/forever (verificada: datos de Forever. El script web/wowhead.mjs baja de aquí los tooltips e iconos del glosario)
 
 ## Cazador
 - Method, leveo y talentos: https://www.method.gg/wow-forever/wow-forever-hunter-leveling-guide-and-talents

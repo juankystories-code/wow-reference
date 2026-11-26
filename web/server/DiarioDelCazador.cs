@@ -1,80 +1,123 @@
 // Servidor local del portal. Compilar con web/server/compilar.bat.
-// Al abrirlo: regenera web/portal.html (si hay Node), busca un puerto libre,
-// sirve el portal en http://localhost:<puerto>/ y abre el navegador.
+// Al abrirlo: regenera web/portal.html (si hay Node), sirve el portal en
+// http://localhost:4060/ y abre el navegador. No tiene ventana: vive como un
+// icono junto al reloj (clic derecho → Salir). Los errores salen en un aviso.
 using System;
 using System.Diagnostics;
+using System.Drawing;
 using System.IO;
 using System.Net;
-using System.Net.Sockets;
 using System.Text;
+using System.Threading;
+using System.Windows.Forms;
 
 class DiarioDelCazador
 {
+    // Siempre el mismo puerto: las casillas marcadas se guardan por puerto en el navegador.
+    // Se puede cambiar con un argumento: "Diario del Cazador.exe" 8080
+    const int DefaultPort = 4060;
+    const string Title = "Diario del Cazador";
     const string Head =
         "<!doctype html>\n<html lang=\"es\">\n<head>\n" +
         "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, viewport-fit=cover\">\n" +
         "<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>\n" +
         "</head>\n<body>\n";
 
+    static string root, page, url;
+    static NotifyIcon tray;
+
+    [STAThread]
     static int Main(string[] args)
     {
-        Console.OutputEncoding = Encoding.UTF8;
-        Console.Title = "Diario del Cazador";
+        try { return Run(args); }
+        catch (Exception e)
+        {
+            Fail("Ha fallado algo inesperado:\n\n" + e);
+            return 1;
+        }
+    }
 
-        string root = FindRoot(AppDomain.CurrentDomain.BaseDirectory);
+    static int Run(string[] args)
+    {
+        Application.EnableVisualStyles();
+
+        int port;
+        if (args.Length == 0 || !int.TryParse(args[0], out port)) port = DefaultPort;
+        url = "http://localhost:" + port + "/";
+
+        // Si ya hay uno abierto, solo abre el navegador.
+        if (IsRunning(url)) { OpenBrowser(); return 0; }
+
+        root = FindRoot(AppDomain.CurrentDomain.BaseDirectory);
         if (root == null)
         {
-            Console.WriteLine("No encuentro la carpeta web/ del repositorio. Deja el .exe en la raiz del repo.");
-            Console.ReadKey();
+            Fail("No encuentro la carpeta web/ del repositorio.\nDeja el .exe en la raíz del repositorio wow-reference.");
             return 1;
         }
-        string page = Path.Combine(root, "web", "portal.html");
+        page = Path.Combine(root, "web", "portal.html");
 
-        Rebuild(root);
+        string buildMsg = Rebuild();
         if (!File.Exists(page))
         {
-            Console.WriteLine("No existe web/portal.html. Ejecuta: node web/build.mjs");
-            Console.ReadKey();
+            Fail("No existe web/portal.html y no se pudo generar.\n\n" + buildMsg);
             return 1;
         }
 
-        // Puerto libre al azar; opcionalmente uno fijo: "Diario del Cazador.exe" 8080
-        int port;
-        if (args.Length == 0 || !int.TryParse(args[0], out port)) port = FreePort();
-        string url = "http://localhost:" + port + "/";
         HttpListener http = new HttpListener();
         http.Prefixes.Add(url);
         try { http.Start(); }
         catch (Exception e)
         {
-            Console.WriteLine("No se pudo abrir el servidor: " + e.Message);
-            Console.ReadKey();
+            Fail("No se pudo abrir el servidor en el puerto " + port + ":\n" + e.Message +
+                 "\n\nPrueba otro puerto: \"Diario del Cazador.exe\" 8080");
             return 1;
         }
 
-        Console.WriteLine();
-        Console.WriteLine("  Diario del Cazador en " + url);
-        Console.WriteLine("  Cierra esta ventana para apagarlo.");
-        Console.WriteLine();
-        try { Process.Start(url); } catch { }
-
-        while (true)
+        Thread server = new Thread(delegate ()
         {
-            HttpListenerContext ctx;
-            try { ctx = http.GetContext(); } catch { break; }
-            try { Serve(ctx, page); } catch { }
-        }
+            while (http.IsListening)
+            {
+                HttpListenerContext ctx;
+                try { ctx = http.GetContext(); } catch { break; }
+                try { Serve(ctx); } catch { }
+            }
+        });
+        server.IsBackground = true;
+        server.Start();
+
+        ContextMenuStrip menu = new ContextMenuStrip();
+        menu.Items.Add("Abrir el portal", null, delegate { OpenBrowser(); });
+        menu.Items.Add("Regenerar desde las guías", null, delegate
+        {
+            string m = Rebuild();
+            tray.ShowBalloonTip(3000, Title, m + "\nRecarga la página.", ToolTipIcon.Info);
+        });
+        menu.Items.Add(new ToolStripSeparator());
+        menu.Items.Add("Salir", null, delegate { tray.Visible = false; http.Stop(); Application.Exit(); });
+
+        tray = new NotifyIcon();
+        tray.Icon = AppIcon();
+        tray.Text = Title + " · localhost:" + port;
+        tray.ContextMenuStrip = menu;
+        tray.DoubleClick += delegate { OpenBrowser(); };
+        tray.Visible = true;
+        tray.ShowBalloonTip(4000, Title, "Funcionando en " + url +
+            "\nDoble clic en este icono para abrirlo; clic derecho → Salir para apagarlo.", ToolTipIcon.Info);
+
+        OpenBrowser();
+        Application.Run();
+        tray.Visible = false;
         return 0;
     }
 
-    static void Serve(HttpListenerContext ctx, string page)
+    static void Serve(HttpListenerContext ctx)
     {
         string path = ctx.Request.Url.AbsolutePath;
         HttpListenerResponse res = ctx.Response;
         byte[] body;
         if (path == "/" || path == "/index.html")
         {
-            // Se lee en cada peticion: si regeneras el portal, basta con recargar.
+            // Se lee en cada petición: si regeneras el portal, basta con recargar.
             body = Encoding.UTF8.GetBytes(Head + File.ReadAllText(page, Encoding.UTF8) + "\n</body>\n</html>\n");
             res.ContentType = "text/html; charset=utf-8";
             res.AddHeader("Cache-Control", "no-store");
@@ -87,6 +130,47 @@ class DiarioDelCazador
         res.ContentLength64 = body.Length;
         res.OutputStream.Write(body, 0, body.Length);
         res.OutputStream.Close();
+    }
+
+    static string Rebuild()
+    {
+        if (!File.Exists(Path.Combine(root, "web", "build.mjs"))) return "No está web/build.mjs.";
+        try
+        {
+            ProcessStartInfo psi = new ProcessStartInfo("node", "web/build.mjs");
+            psi.WorkingDirectory = root;
+            psi.UseShellExecute = false;
+            psi.CreateNoWindow = true;
+            psi.RedirectStandardOutput = true;
+            psi.RedirectStandardError = true;
+            Process p = Process.Start(psi);
+            string err = p.StandardError.ReadToEndAsync().Result;
+            string outp = p.StandardOutput.ReadToEnd();
+            p.WaitForExit(30000);
+            return p.ExitCode == 0 ? outp.Trim() : "No se pudo regenerar el portal:\n" + err.Trim();
+        }
+        catch
+        {
+            return "Node no está instalado: uso el portal.html que ya hay.";
+        }
+    }
+
+    static void OpenBrowser()
+    {
+        try { Process.Start(url); } catch (Exception e) { Fail("No se pudo abrir el navegador:\n" + e.Message + "\n\nAbre a mano " + url); }
+    }
+
+    static bool IsRunning(string u)
+    {
+        try
+        {
+            HttpWebRequest req = (HttpWebRequest)WebRequest.Create(u);
+            req.Timeout = 1500;
+            req.Proxy = null;
+            using (HttpWebResponse r = (HttpWebResponse)req.GetResponse())
+                return r.StatusCode == HttpStatusCode.OK;
+        }
+        catch { return false; }
     }
 
     static string FindRoot(string dir)
@@ -102,35 +186,15 @@ class DiarioDelCazador
         return null;
     }
 
-    static void Rebuild(string root)
+    static Icon AppIcon()
     {
-        if (!File.Exists(Path.Combine(root, "web", "build.mjs"))) return;
-        try
-        {
-            ProcessStartInfo psi = new ProcessStartInfo("node", "web/build.mjs");
-            psi.WorkingDirectory = root;
-            psi.UseShellExecute = false;
-            psi.CreateNoWindow = true;
-            psi.RedirectStandardOutput = true;
-            psi.RedirectStandardError = true;
-            Process p = Process.Start(psi);
-            string outp = p.StandardOutput.ReadToEnd();
-            string err = p.StandardError.ReadToEnd();
-            p.WaitForExit(30000);
-            Console.WriteLine(p.ExitCode == 0 ? "  " + outp.Trim() : "  No se pudo regenerar el portal:\n" + err);
-        }
-        catch
-        {
-            Console.WriteLine("  Node no esta instalado: uso el portal.html que ya hay.");
-        }
+        try { return Icon.ExtractAssociatedIcon(Application.ExecutablePath); }
+        catch { return SystemIcons.Application; }
     }
 
-    static int FreePort()
+    static void Fail(string msg)
     {
-        TcpListener l = new TcpListener(IPAddress.Loopback, 0);
-        l.Start();
-        int port = ((IPEndPoint)l.LocalEndpoint).Port;
-        l.Stop();
-        return port;
+        try { File.WriteAllText(Path.Combine(root ?? AppDomain.CurrentDomain.BaseDirectory, "diario.log"), DateTime.Now + "\n" + msg); } catch { }
+        MessageBox.Show(msg, Title, MessageBoxButtons.OK, MessageBoxIcon.Warning);
     }
 }
