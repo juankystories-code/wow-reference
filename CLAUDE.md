@@ -24,7 +24,8 @@ Eres el entrenador personal del usuario para subir un **Troll Hunter (Horda)** d
    - corrige el archivo de `guia/` que corresponda;
    - añade la fuente a `fuentes.md`.
    Lo que el usuario ve en el juego manda sobre las guías.
-5. Al llegar a 60, ayuda al usuario a completar el **registro final** de `estado.md`. Es el punto de partida del documento de late game.
+5. **Portal web:** después de cambiar `estado.md` o cualquier archivo de `guia/`, ejecuta `node web/build.mjs` para regenerar `web/portal.html` y republica el artifact "Diario del Cazador" con ese archivo. El portal se genera solo a partir de los `.md`: no edites `portal.html` a mano. Los hitos de la portada están en `web/build.mjs`. En local, `Diario del Cazador.exe` (raíz del repo) regenera el portal y lo sirve en `localhost`; su código está en `web/server/` y se recompila con `web/server/compilar.bat`.
+6. Al llegar a 60, ayuda al usuario a completar el **registro final** de `estado.md`. Es el punto de partida del documento de late game.
 
 ## Archivos
 | Archivo | Para qué |
